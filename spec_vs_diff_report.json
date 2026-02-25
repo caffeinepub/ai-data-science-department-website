@@ -1,0 +1,71 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T18:11:04.011Z",
+  "summary": "The diff implements a comprehensive Department of AI & Data Science website with all major sections, a Motoko backend, and supporting infrastructure. Most requirements are well-implemented. Notable gaps: the backend lacks a timestamp on stored messages (REQ-14 AC), and the contactMessages map is not declared as a stable variable so data will not survive canister upgrades. Two hallucinated features are present: a getContactInfo backend query and ContactInfo type that were not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-14",
+      "requirement": "submitContactMessage stores the provided fields with a timestamp.",
+      "reason": "The ContactMessage type and submitContactMessage function in backend/main.mo do not include a timestamp field. Messages are stored without any time metadata, violating the AC that requires a timestamp to be stored with each submission.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "requirement": "Data persists across canister upgrades via stable storage.",
+      "reason": "The contactMessages map is declared as a regular let binding (let contactMessages = Map.empty<Text, ContactMessage>()), not as a stable variable. There are no stable var declarations or pre/postupgrade hooks, so data will not persist across canister upgrades.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "getContactInfo backend query endpoint returning department address, email, phone, and Google Maps URL",
+      "reason": "The BuildRequest only specifies submitContactMessage and getContactMessages as backend endpoints. The getContactInfo query and ContactInfo type were added to the backend and wired into the frontend without being requested.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/components/Contact.tsx"
+      ]
+    },
+    {
+      "description": "ContactInfo type and static department contact data stored and served from the Motoko backend canister",
+      "reason": "The BuildRequest does not request contact information such as address, phone, email, or maps URL to be stored or served from the backend. Only contact form submissions should be stored on-chain per REQ-14.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/About.tsx",
+    "frontend/src/components/Achievements.tsx",
+    "frontend/src/components/Contact.tsx",
+    "frontend/src/components/Events.tsx",
+    "frontend/src/components/Faculty.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Labs.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/Placements.tsx",
+    "frontend/src/components/Programs.tsx",
+    "frontend/src/components/Research.tsx",
+    "frontend/src/components/ScrollAnimation.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

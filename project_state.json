@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Department Website for the Department of Artificial Intelligence and Data Science at Priyadarshini Engineering College. Modern, professional, responsive single-page website with blue/white gradient theme, smooth animations, and 10 sections: Hero, About, Programs, Faculty, Labs, Student Achievements, Events, Placements, Research, and Contact.",
+  "architectural_notes": [
+    "Blue, white, and subtle gradient color theme with professional academic typography",
+    "Fully responsive layout (mobile + tablet + desktop) with smooth animations and hover effects",
+    "SEO optimized, fast loading, clean structured code with modern UI components",
+    "Footer with quick links and social media icons"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract AI neural network visualization with glowing nodes and connecting lines on a deep blue background, suitable for a full-width hero banner (hero-ai-bg.dim_1920x1080.png)\n- Neutral professional silhouette avatar for faculty member placeholder, clean white background with subtle blue accent (faculty-avatar.dim_400x400.png)\n- Event thumbnail showing a group of students at a tech workshop with laptops, bright academic environment (event-thumb-1.dim_800x500.png)\n- Event thumbnail showing a hackathon competition setting with coding screens and energy (event-thumb-2.dim_800x500.png)\n- Event thumbnail showing a seminar/guest lecture with a speaker at a podium and audience (event-thumb-3.dim_800x500.png)\n- Event thumbnail showing an AI demonstration or robotics showcase in a lab setting (event-thumb-4.dim_800x500.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-hero-section-with-the-department-name-department-of-artificial-intelligence-and-data-science-priyadarshini-engineering-college-tagline-innovating-the-future-with-ai-data-science-an-ai-themed-abstract-animated-background-graphic-and-two-cta-buttons-explore-programs-smooth-scrolls-to-programs-section-and-contact-us-smooth-scrolls-to-contact-section",
+      "title": "Implement a Hero section with the department name 'Department of Artificial Intelligence and Data Science – Priyadarshini Engineering College', tagline 'Innovating the Future with AI & Data Science', an AI-themed abstract animated background graphic, and two CTA buttons: 'Explore Programs' (smooth-scrolls to Programs section) and 'Contact Us' (smooth-scrolls to Contact section).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-about-the-department-section-containing-a-vision-statement-a-mission-statement-a-brief-introduction-paragraph-about-the-ai-data-science-field-and-three-key-highlight-cards-showing-established-year-intake-capacity-and-accreditation-status",
+      "title": "Implement an About the Department section containing: a Vision statement, a Mission statement, a brief introduction paragraph about the AI & Data Science field, and three key highlight cards showing Established Year, Intake Capacity, and Accreditation status.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-programs-offered-section-with-a-card-for-b-tech-in-ai-data-science-including-curriculum-highlights-such-as-core-subjects-and-electives-and-a-placeholder-card-for-a-future-m-tech-program-indicating-it-is-coming-soon",
+      "title": "Implement a Programs Offered section with a card for B.Tech in AI & Data Science (including curriculum highlights such as core subjects and electives) and a placeholder card for a future M.Tech program indicating it is 'Coming Soon'.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-faculty-section-displaying-faculty-member-cards-in-a-responsive-grid-each-card-shows-a-faculty-photo-use-the-generated-placeholder-faculty-avatar-image-name-designation-and-area-of-specialization-include-at-least-6-sample-faculty-entries",
+      "title": "Implement a Faculty section displaying faculty member cards in a responsive grid. Each card shows a faculty photo (use the generated placeholder faculty avatar image), name, designation, and area of specialization. Include at least 6 sample faculty entries.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-laboratories-infrastructure-section-with-four-cards-for-ai-lab-data-analytics-lab-computing-facilities-and-smart-classroom-each-card-includes-an-icon-a-name-and-a-short-descriptive-paragraph-about-the-facility",
+      "title": "Implement a Laboratories & Infrastructure section with four cards for: AI Lab, Data Analytics Lab, Computing Facilities, and Smart Classroom. Each card includes an icon, a name, and a short descriptive paragraph about the facility.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-student-achievements-section-with-three-subsections-hackathon-wins-list-of-notable-wins-with-event-name-and-year-research-publications-list-of-published-papers-with-title-and-venue-and-internship-highlights-key-companies-and-roles-use-stat-counters-or-cards-as-appropriate",
+      "title": "Implement a Student Achievements section with three subsections: Hackathon Wins (list of notable wins with event name and year), Research Publications (list of published papers with title and venue), and Internship Highlights (key companies and roles). Use stat counters or cards as appropriate.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-events-workshops-section-with-two-parts-an-upcoming-events-list-event-name-date-brief-description-and-a-past-events-gallery-event-thumbnail-images-arranged-in-a-grid-with-captions-use-generated-images-for-event-thumbnails",
+      "title": "Implement an Events & Workshops section with two parts: an Upcoming Events list (event name, date, brief description) and a Past Events gallery (event thumbnail images arranged in a grid with captions). Use generated images for event thumbnails.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-placement-industry-collaboration-section-showing-placement-statistics-placement-rate-average-package-highest-package-as-animated-stat-cards-a-row-of-partner-company-logo-placeholders-and-an-internship-opportunities-subsection-with-a-brief-description-and-a-call-to-action",
+      "title": "Implement a Placement & Industry Collaboration section showing: placement statistics (placement rate %, average package, highest package) as animated stat cards; a row of partner company logo placeholders; and an internship opportunities subsection with a brief description and a call-to-action.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-research-projects-section-with-two-subsections-ongoing-projects-project-title-description-team-lead-displayed-as-cards-and-a-student-project-showcase-project-name-brief-description-tech-stack-tags-displayed-as-a-gallery-or-grid-include-at-least-3-sample-entries-each",
+      "title": "Implement a Research & Projects section with two subsections: Ongoing Projects (project title, description, team lead) displayed as cards, and a Student Project Showcase (project name, brief description, tech stack tags) displayed as a gallery or grid. Include at least 3 sample entries each.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-section-containing-department-address-email-address-phone-number-an-embedded-google-maps-iframe-placeholder-static-image-or-embedded-link-pointing-to-priyadarshini-engineering-college-and-a-contact-form-with-fields-for-name-email-subject-and-message-with-a-submit-button-the-contact-form-should-store-submitted-messages-in-the-backend",
+      "title": "Implement a Contact section containing: department address, email address, phone number, an embedded Google Maps iframe placeholder (static image or embedded link pointing to Priyadarshini Engineering College), and a contact form with fields for Name, Email, Subject, and Message with a Submit button. The contact form should store submitted messages in the backend.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-responsive-sticky-navigation-bar-with-the-department-name-logo-on-the-left-navigation-links-to-all-major-sections-about-programs-faculty-labs-achievements-events-placements-research-contact-on-the-right-and-a-hamburger-menu-on-mobile-include-smooth-scroll-behavior-on-nav-link-clicks",
+      "title": "Implement a responsive sticky navigation bar with the department name/logo on the left, navigation links to all major sections (About, Programs, Faculty, Labs, Achievements, Events, Placements, Research, Contact) on the right, and a hamburger menu on mobile. Include smooth scroll behavior on nav link clicks.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-site-footer-with-quick-links-to-all-major-sections-department-contact-details-social-media-icons-linkedin-twitter-youtube-instagram-and-a-copyright-notice-for-the-department-of-ai-data-science-priyadarshini-engineering-college",
+      "title": "Implement a site footer with quick links to all major sections, department contact details, social media icons (LinkedIn, Twitter, YouTube, Instagram), and a copyright notice for the Department of AI & Data Science, Priyadarshini Engineering College.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-blue-white-and-subtle-gradient-visual-theme-throughout-the-entire-site-use-professional-academic-typography-e-g-a-serif-or-clean-sans-serif-heading-font-paired-with-a-readable-body-font-add-smooth-entrance-animations-on-scroll-fade-in-slide-up-for-section-content-and-hover-effects-on-all-interactive-cards-and-buttons",
+      "title": "Apply a consistent blue, white, and subtle gradient visual theme throughout the entire site. Use professional academic typography (e.g., a serif or clean sans-serif heading font paired with a readable body font). Add smooth entrance animations on scroll (fade-in / slide-up) for section content, and hover effects on all interactive cards and buttons.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-following-generated-images-as-static-assets-from-frontend-public-assets-generated-the-ai-abstract-hero-background-faculty-avatar-placeholder-and-past-event-thumbnails",
+      "title": "Render the following generated images as static assets from frontend/public/assets/generated: the AI abstract hero background, faculty avatar placeholder, and past event thumbnails.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with department name, tagline, AI abstract background, and CTA buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "About section with Vision/Mission, intro, and key highlights",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Programs Offered section: B.Tech AI&DS, M.Tech placeholder, curriculum highlights",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Faculty section with cards showing photo, name, designation, specialization",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Laboratories & Infrastructure section: AI Lab, Data Analytics Lab, Computing, Smart Classroom",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Student Achievements section: hackathon wins, research publications, internships",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Events & Workshops section: upcoming events and past events gallery",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Placement & Industry Collaboration: stats, partner logos, internship opportunities",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Research & Projects section: ongoing projects and student project showcase",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Contact section: address, email, phone, Google Maps, contact form",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Implement a Motoko backend actor with a `submitContactMessage` update call that accepts Name, Email, Subject, and Message fields and stores them in stable memory. Provide a `getContactMessages` query for admin retrieval.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "AI & Data Science Department Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

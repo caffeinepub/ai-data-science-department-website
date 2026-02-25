@@ -1,0 +1,20 @@
+{
+  "frontend/src/index.css": "Global styles with OKLCH blue/white academic color system, Google Fonts import for Inter and Playfair Display, gradient utilities, scroll animation classes, and semantic design tokens for the department website theme.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom brand blue color palette, Playfair Display/Inter font families, card shadow utilities, and float/pulse animation keyframes for the academic website.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching contact info, submitting contact form messages to the backend canister, and retrieving stored contact messages.",
+  "frontend/src/components/ScrollAnimation.tsx": "Reusable intersection observer wrapper component that triggers fade-in/slide-up/slide-left/slide-right entrance animations when elements enter the viewport.",
+  "frontend/src/components/Navigation.tsx": "Sticky responsive navigation bar with department branding, smooth-scroll section links, active section highlighting via intersection observer, and a mobile hamburger dropdown menu.",
+  "frontend/src/components/Hero.tsx": "Full-screen hero section with AI abstract background image, department name, tagline, animated floating orbs, CTA buttons for Programs and Contact, and a stats row showing key highlights.",
+  "frontend/src/components/About.tsx": "About section with department introduction paragraph, Vision and Mission cards with icons, and three highlight cards for Established Year, Intake Capacity, and Accreditation with scroll animations.",
+  "frontend/src/components/Programs.tsx": "Programs section with a detailed B.Tech AI & Data Science card showing curriculum and stats, and a Coming Soon M.Tech placeholder card with a blurred overlay.",
+  "frontend/src/components/Faculty.tsx": "Faculty section displaying 8 faculty member cards in a responsive grid with avatar images, name, designation badges, specialization, experience, and email/LinkedIn action buttons.",
+  "frontend/src/components/Labs.tsx": "Laboratories section with four facility cards (AI Lab, Data Analytics Lab, HPC, Smart Classroom) each featuring a gradient header, description, and feature tags in a responsive 2x2 grid.",
+  "frontend/src/components/Achievements.tsx": "Student achievements section with animated count-up stat cards and three subsections for Hackathon Wins, Research Publications, and Internship Highlights with detailed entries.",
+  "frontend/src/components/Events.tsx": "Events section with upcoming events list (4 events with date/time/venue) and a past events gallery using generated thumbnail images in a responsive grid with hover effects.",
+  "frontend/src/components/Placements.tsx": "Placements section with animated stat cards (placement rate, average/highest package), a grid of 12 recruiting partner company names, and an internship opportunities CTA banner.",
+  "frontend/src/components/Research.tsx": "Research section with ongoing faculty research projects (4 cards with funding info) and a student project showcase (6 cards with tech stack badges) in responsive grids.",
+  "frontend/src/components/Contact.tsx": "Contact section with department info card, embedded Google Maps iframe, and a contact form that submits to the backend canister with loading/success/error states.",
+  "frontend/src/components/Footer.tsx": "Site footer with department branding, quick navigation links in two columns, contact details, social media icons (LinkedIn, X, YouTube, Instagram), copyright notice, and caffeine.ai attribution.",
+  "frontend/src/App.tsx": "Main application component that composes all 10 section components with Navigation and Footer, plus a Sonner toast provider for notifications.",
+  "frontend/index.html": "SEO-optimized HTML entry point with meta description, keywords, and Open Graph tags for the department website, without external preconnect links that caused Vite build conflicts."
+}

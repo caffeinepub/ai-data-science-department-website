@@ -1,0 +1,297 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-a-hero-section-with-the-department-name-department-of-artificial-intelligence-and-data-science-priyadarshini-engineering-college-tagline-innovating-the-future-with-ai-data-science-an-ai-themed-abstract-animated-background-graphic-and-two-cta-buttons-explore-programs-smooth-scrolls-to-programs-section-and-contact-us-smooth-scrolls-to-contact-section",
+      "featureTitle": "Implement a Hero section with the department name 'Department of Artificial Intelligence and Data Science – Priyadarshini Engineering College', tagline 'Innovating the Future with AI & Data Science', an AI-themed abstract animated background graphic, and two CTA buttons: 'Explore Programs' (smooth-scrolls to Programs section) and 'Contact Us' (smooth-scrolls to Contact section).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Hero.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-about-the-department-section-containing-a-vision-statement-a-mission-statement-a-brief-introduction-paragraph-about-the-ai-data-science-field-and-three-key-highlight-cards-showing-established-year-intake-capacity-and-accreditation-status",
+      "featureTitle": "Implement an About the Department section containing: a Vision statement, a Mission statement, a brief introduction paragraph about the AI & Data Science field, and three key highlight cards showing Established Year, Intake Capacity, and Accreditation status.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/About.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-programs-offered-section-with-a-card-for-b-tech-in-ai-data-science-including-curriculum-highlights-such-as-core-subjects-and-electives-and-a-placeholder-card-for-a-future-m-tech-program-indicating-it-is-coming-soon",
+      "featureTitle": "Implement a Programs Offered section with a card for B.Tech in AI & Data Science (including curriculum highlights such as core subjects and electives) and a placeholder card for a future M.Tech program indicating it is 'Coming Soon'.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Programs.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-faculty-section-displaying-faculty-member-cards-in-a-responsive-grid-each-card-shows-a-faculty-photo-use-the-generated-placeholder-faculty-avatar-image-name-designation-and-area-of-specialization-include-at-least-6-sample-faculty-entries",
+      "featureTitle": "Implement a Faculty section displaying faculty member cards in a responsive grid. Each card shows a faculty photo (use the generated placeholder faculty avatar image), name, designation, and area of specialization. Include at least 6 sample faculty entries.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Faculty.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-laboratories-infrastructure-section-with-four-cards-for-ai-lab-data-analytics-lab-computing-facilities-and-smart-classroom-each-card-includes-an-icon-a-name-and-a-short-descriptive-paragraph-about-the-facility",
+      "featureTitle": "Implement a Laboratories & Infrastructure section with four cards for: AI Lab, Data Analytics Lab, Computing Facilities, and Smart Classroom. Each card includes an icon, a name, and a short descriptive paragraph about the facility.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Labs.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-student-achievements-section-with-three-subsections-hackathon-wins-list-of-notable-wins-with-event-name-and-year-research-publications-list-of-published-papers-with-title-and-venue-and-internship-highlights-key-companies-and-roles-use-stat-counters-or-cards-as-appropriate",
+      "featureTitle": "Implement a Student Achievements section with three subsections: Hackathon Wins (list of notable wins with event name and year), Research Publications (list of published papers with title and venue), and Internship Highlights (key companies and roles). Use stat counters or cards as appropriate.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Achievements.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-events-workshops-section-with-two-parts-an-upcoming-events-list-event-name-date-brief-description-and-a-past-events-gallery-event-thumbnail-images-arranged-in-a-grid-with-captions-use-generated-images-for-event-thumbnails",
+      "featureTitle": "Implement an Events & Workshops section with two parts: an Upcoming Events list (event name, date, brief description) and a Past Events gallery (event thumbnail images arranged in a grid with captions). Use generated images for event thumbnails.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Events.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-placement-industry-collaboration-section-showing-placement-statistics-placement-rate-average-package-highest-package-as-animated-stat-cards-a-row-of-partner-company-logo-placeholders-and-an-internship-opportunities-subsection-with-a-brief-description-and-a-call-to-action",
+      "featureTitle": "Implement a Placement & Industry Collaboration section showing: placement statistics (placement rate %, average package, highest package) as animated stat cards; a row of partner company logo placeholders; and an internship opportunities subsection with a brief description and a call-to-action.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Placements.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-research-projects-section-with-two-subsections-ongoing-projects-project-title-description-team-lead-displayed-as-cards-and-a-student-project-showcase-project-name-brief-description-tech-stack-tags-displayed-as-a-gallery-or-grid-include-at-least-3-sample-entries-each",
+      "featureTitle": "Implement a Research & Projects section with two subsections: Ongoing Projects (project title, description, team lead) displayed as cards, and a Student Project Showcase (project name, brief description, tech stack tags) displayed as a gallery or grid. Include at least 3 sample entries each.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Research.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-contact-section-containing-department-address-email-address-phone-number-an-embedded-google-maps-iframe-placeholder-static-image-or-embedded-link-pointing-to-priyadarshini-engineering-college-and-a-contact-form-with-fields-for-name-email-subject-and-message-with-a-submit-button-the-contact-form-should-store-submitted-messages-in-the-backend",
+      "featureTitle": "Implement a Contact section containing: department address, email address, phone number, an embedded Google Maps iframe placeholder (static image or embedded link pointing to Priyadarshini Engineering College), and a contact form with fields for Name, Email, Subject, and Message with a Submit button. The contact form should store submitted messages in the backend.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Contact.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-responsive-sticky-navigation-bar-with-the-department-name-logo-on-the-left-navigation-links-to-all-major-sections-about-programs-faculty-labs-achievements-events-placements-research-contact-on-the-right-and-a-hamburger-menu-on-mobile-include-smooth-scroll-behavior-on-nav-link-clicks",
+      "featureTitle": "Implement a responsive sticky navigation bar with the department name/logo on the left, navigation links to all major sections (About, Programs, Faculty, Labs, Achievements, Events, Placements, Research, Contact) on the right, and a hamburger menu on mobile. Include smooth scroll behavior on nav link clicks.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-site-footer-with-quick-links-to-all-major-sections-department-contact-details-social-media-icons-linkedin-twitter-youtube-instagram-and-a-copyright-notice-for-the-department-of-ai-data-science-priyadarshini-engineering-college",
+      "featureTitle": "Implement a site footer with quick links to all major sections, department contact details, social media icons (LinkedIn, Twitter, YouTube, Instagram), and a copyright notice for the Department of AI & Data Science, Priyadarshini Engineering College.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-blue-white-and-subtle-gradient-visual-theme-throughout-the-entire-site-use-professional-academic-typography-e-g-a-serif-or-clean-sans-serif-heading-font-paired-with-a-readable-body-font-add-smooth-entrance-animations-on-scroll-fade-in-slide-up-for-section-content-and-hover-effects-on-all-interactive-cards-and-buttons",
+      "featureTitle": "Apply a consistent blue, white, and subtle gradient visual theme throughout the entire site. Use professional academic typography (e.g., a serif or clean sans-serif heading font paired with a readable body font). Add smooth entrance animations on scroll (fade-in / slide-up) for section content, and hover effects on all interactive cards and buttons.",
+      "files": [
+        "frontend/src/components/About.tsx",
+        "frontend/src/components/Achievements.tsx",
+        "frontend/src/components/Contact.tsx",
+        "frontend/src/components/Events.tsx",
+        "frontend/src/components/Faculty.tsx",
+        "frontend/src/components/Hero.tsx",
+        "frontend/src/components/Labs.tsx",
+        "frontend/src/components/Placements.tsx",
+        "frontend/src/components/Programs.tsx",
+        "frontend/src/components/Research.tsx",
+        "frontend/src/components/ScrollAnimation.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-following-generated-images-as-static-assets-from-frontend-public-assets-generated-the-ai-abstract-hero-background-faculty-avatar-placeholder-and-past-event-thumbnails",
+      "featureTitle": "Render the following generated images as static assets from frontend/public/assets/generated: the AI abstract hero background, faculty avatar placeholder, and past event thumbnails.",
+      "files": [
+        "frontend/src/components/Events.tsx",
+        "frontend/src/components/Faculty.tsx",
+        "frontend/src/components/Hero.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

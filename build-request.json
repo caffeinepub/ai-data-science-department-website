@@ -1,0 +1,352 @@
+{
+  "kind": "build_request",
+  "title": "Department of AI & Data Science – Priyadarshini Engineering College Website",
+  "projectName": "AI & DS Department",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement a Hero section with the department name 'Department of Artificial Intelligence and Data Science – Priyadarshini Engineering College', tagline 'Innovating the Future with AI & Data Science', an AI-themed abstract animated background graphic, and two CTA buttons: 'Explore Programs' (smooth-scrolls to Programs section) and 'Contact Us' (smooth-scrolls to Contact section).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Hero Section",
+          "Department name",
+          "Tagline: \"Innovating the Future with AI & Data Science\"",
+          "Call-to-action buttons (Explore Programs, Contact Us)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Department name and tagline are prominently displayed in the hero.",
+        "AI-themed abstract graphic (generated image) is rendered as background.",
+        "Both CTA buttons scroll smoothly to their target sections.",
+        "Section is fully responsive on mobile, tablet, and desktop."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement an About the Department section containing: a Vision statement, a Mission statement, a brief introduction paragraph about the AI & Data Science field, and three key highlight cards showing Established Year, Intake Capacity, and Accreditation status.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "About the Department",
+          "Vision and Mission",
+          "Brief introduction about AI & DS field",
+          "Key highlights (Established year, intake capacity, accreditation)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Vision and Mission are displayed as distinct labeled subsections.",
+        "At least one paragraph of introductory text about AI & DS is shown.",
+        "Three highlight cards are visible with icons and labels for Established Year, Intake Capacity, and Accreditation.",
+        "Layout adjusts gracefully on all screen sizes."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a Programs Offered section with a card for B.Tech in AI & Data Science (including curriculum highlights such as core subjects and electives) and a placeholder card for a future M.Tech program indicating it is 'Coming Soon'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Programs Offered",
+          "B.Tech in AI & Data Science",
+          "Future M.Tech program (placeholder)",
+          "Curriculum highlights"
+        ]
+      },
+      "acceptanceCriteria": [
+        "B.Tech card includes program name, duration, and a list of curriculum highlights.",
+        "M.Tech card is visually distinct and marked as 'Coming Soon'.",
+        "Section is responsive and cards stack on mobile."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a Faculty section displaying faculty member cards in a responsive grid. Each card shows a faculty photo (use the generated placeholder faculty avatar image), name, designation, and area of specialization. Include at least 6 sample faculty entries.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Faculty Section",
+          "Faculty cards with photo, name, designation, specialization"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 6 faculty cards are rendered in a responsive grid.",
+        "Each card shows a photo/avatar, name, designation, and specialization.",
+        "Cards have a subtle hover effect (lift or shadow).",
+        "Grid collapses to a single column on mobile."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement a Laboratories & Infrastructure section with four cards for: AI Lab, Data Analytics Lab, Computing Facilities, and Smart Classroom. Each card includes an icon, a name, and a short descriptive paragraph about the facility.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Laboratories & Infrastructure",
+          "AI Lab",
+          "Data Analytics Lab",
+          "Computing Facilities",
+          "Smart Classroom"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four lab/facility cards are present.",
+        "Each card has a distinct icon, heading, and description text.",
+        "Section is responsive across all breakpoints."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement a Student Achievements section with three subsections: Hackathon Wins (list of notable wins with event name and year), Research Publications (list of published papers with title and venue), and Internship Highlights (key companies and roles). Use stat counters or cards as appropriate.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Student Achievements",
+          "Hackathon wins",
+          "Research publications",
+          "Internship highlights"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Three clearly labeled subsections are present.",
+        "Each subsection contains at least 3 sample entries.",
+        "Animated count-up numbers or highlight cards are used for impact metrics.",
+        "Section is fully responsive."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement an Events & Workshops section with two parts: an Upcoming Events list (event name, date, brief description) and a Past Events gallery (event thumbnail images arranged in a grid with captions). Use generated images for event thumbnails.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Events & Workshops",
+          "Upcoming events section",
+          "Past events gallery"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Upcoming events list shows at least 3 sample upcoming events.",
+        "Past events gallery shows at least 4 thumbnail cards with captions.",
+        "Gallery is responsive and wraps correctly on smaller screens.",
+        "Generated event thumbnail images are loaded from frontend/public/assets/generated."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement a Placement & Industry Collaboration section showing: placement statistics (placement rate %, average package, highest package) as animated stat cards; a row of partner company logo placeholders; and an internship opportunities subsection with a brief description and a call-to-action.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Placement & Industry Collaboration",
+          "Placement statistics",
+          "Partner companies logos",
+          "Internship opportunities"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 3 placement stat cards are shown with animated numbers.",
+        "At least 6 partner company logo placeholders are displayed in a horizontal scroll or grid.",
+        "An internship opportunities subsection with descriptive text and a CTA button is present.",
+        "Section is fully responsive."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement a Research & Projects section with two subsections: Ongoing Projects (project title, description, team lead) displayed as cards, and a Student Project Showcase (project name, brief description, tech stack tags) displayed as a gallery or grid. Include at least 3 sample entries each.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Research & Projects",
+          "Ongoing projects",
+          "Student project showcase"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Ongoing Projects subsection has at least 3 project cards.",
+        "Student Project Showcase has at least 3 entries with tech stack tags.",
+        "Cards have hover effects and consistent styling.",
+        "Fully responsive layout."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Implement a Contact section containing: department address, email address, phone number, an embedded Google Maps iframe placeholder (static image or embedded link pointing to Priyadarshini Engineering College), and a contact form with fields for Name, Email, Subject, and Message with a Submit button. The contact form should store submitted messages in the backend.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Contact Section",
+          "Address",
+          "Email",
+          "Phone",
+          "Google Maps integration",
+          "Contact form"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact details (address, email, phone) are clearly displayed.",
+        "A map embed or static map placeholder for Priyadarshini Engineering College is shown.",
+        "Contact form fields: Name, Email, Subject, Message are all present with basic validation.",
+        "On submission, form data is saved to the backend canister and a success confirmation is shown to the user.",
+        "Section is fully responsive."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Implement a responsive sticky navigation bar with the department name/logo on the left, navigation links to all major sections (About, Programs, Faculty, Labs, Achievements, Events, Placements, Research, Contact) on the right, and a hamburger menu on mobile. Include smooth scroll behavior on nav link clicks.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Fully responsive (mobile + tablet + desktop)",
+          "Smooth animations and hover effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation bar is sticky and remains visible on scroll.",
+        "All section links are present and trigger smooth scroll.",
+        "On mobile, a hamburger menu toggles a dropdown nav.",
+        "Active section is highlighted in the nav as user scrolls."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Implement a site footer with quick links to all major sections, department contact details, social media icons (LinkedIn, Twitter, YouTube, Instagram), and a copyright notice for the Department of AI & Data Science, Priyadarshini Engineering College.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Include footer with quick links and social media icons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer contains quick navigation links organized in columns.",
+        "Social media icons are present and styled consistently.",
+        "Copyright notice is displayed.",
+        "Footer is responsive and stacks gracefully on mobile."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Apply a consistent blue, white, and subtle gradient visual theme throughout the entire site. Use professional academic typography (e.g., a serif or clean sans-serif heading font paired with a readable body font). Add smooth entrance animations on scroll (fade-in / slide-up) for section content, and hover effects on all interactive cards and buttons.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Clean UI with modern academic look",
+          "Blue, white, and subtle gradient theme",
+          "Professional typography",
+          "Smooth animations and hover effects"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent blue/white/gradient color palette is applied site-wide.",
+        "Heading and body fonts are professional and consistently applied.",
+        "Sections animate into view as the user scrolls (intersection observer).",
+        "All cards and buttons have visible hover transitions.",
+        "No visual inconsistencies between sections."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Implement a Motoko backend actor with a `submitContactMessage` update call that accepts Name, Email, Subject, and Message fields and stores them in stable memory. Provide a `getContactMessages` query for admin retrieval.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Contact form"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`submitContactMessage` stores the provided fields with a timestamp.",
+        "`getContactMessages` returns all stored messages.",
+        "Data persists across canister upgrades via stable storage."
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Render the following generated images as static assets from frontend/public/assets/generated: the AI abstract hero background, faculty avatar placeholder, and past event thumbnails.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Background with AI-related abstract graphics",
+          "Faculty cards with photo",
+          "Past events gallery"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All generated image assets are referenced from frontend/public/assets/generated.",
+        "Images load correctly in production and development builds.",
+        "Appropriate alt text is provided for all images."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use blue, white, and subtle gradient color palette as explicitly specified by the user.",
+    "All Motoko logic must remain in a single main actor file (backend/main.mo).",
+    "Do not edit any files under frontend/src/hooks/ or frontend/src/components/ui.",
+    "Contact form data must be stored on-chain in the Motoko backend, not in an external service.",
+    "Google Maps integration must use a static embed/iframe only; no geolocation APIs."
+  ],
+  "nonGoals": [
+    "User authentication or login for site visitors.",
+    "Real-time features such as live chat or WebSocket connections.",
+    "External email sending for contact form submissions.",
+    "CMS or admin dashboard for editing website content dynamically.",
+    "Multi-language (i18n) support.",
+    "Payment or e-commerce features."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract AI neural network visualization with glowing nodes and connecting lines on a deep blue background, suitable for a full-width hero banner (hero-ai-bg.dim_1920x1080.png)",
+      "Neutral professional silhouette avatar for faculty member placeholder, clean white background with subtle blue accent (faculty-avatar.dim_400x400.png)",
+      "Event thumbnail showing a group of students at a tech workshop with laptops, bright academic environment (event-thumb-1.dim_800x500.png)",
+      "Event thumbnail showing a hackathon competition setting with coding screens and energy (event-thumb-2.dim_800x500.png)",
+      "Event thumbnail showing a seminar/guest lecture with a speaker at a podium and audience (event-thumb-3.dim_800x500.png)",
+      "Event thumbnail showing an AI demonstration or robotics showcase in a lab setting (event-thumb-4.dim_800x500.png)"
+    ],
+    "edits": []
+  }
+}
