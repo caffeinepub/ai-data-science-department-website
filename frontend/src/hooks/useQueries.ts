@@ -10,10 +10,9 @@ export function useContactInfo() {
     queryFn: async () => {
       if (!actor) {
         return {
-          address: 'Priyadarshini Engineering College, CRPF Road, Near CRPF Camp, Bara Ghaghra, Bhurkunda, Ranchi, Jharkhand 834010',
-          email: 'contact@priyadarshini.edu.in',
-          phone: '+91 12345 67890',
-          googleMapsUrl: 'https://maps.google.com/?q=bhurkunda',
+          email: 'afnantahibkondalam@gmail.com',
+          github: 'https://github.com/Afnan-Tahib/FUTURE_DS_01',
+          linkedin: 'https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384',
         };
       }
       return actor.getContactInfo();
@@ -27,10 +26,10 @@ export function useSubmitContactMessage() {
   const { actor } = useActor();
   const queryClient = useQueryClient();
 
-  return useMutation<string, Error, { name: string; email: string; subject: string; message: string }>({
-    mutationFn: async ({ name, email, subject, message }) => {
+  return useMutation<string, Error, { name: string; email: string; message: string }>({
+    mutationFn: async ({ name, email, message }) => {
       if (!actor) throw new Error('Backend not available');
-      return actor.submitContactMessage(name, email, subject, message);
+      return actor.submitContactMessage(name, email, message);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contactMessages'] });

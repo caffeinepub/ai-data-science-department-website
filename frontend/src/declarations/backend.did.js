@@ -20,13 +20,11 @@ export const _CaffeineStorageRefillResult = IDL.Record({
   'topped_up_amount' : IDL.Opt(IDL.Nat),
 });
 export const ContactInfo = IDL.Record({
+  'linkedin' : IDL.Text,
   'email' : IDL.Text,
-  'googleMapsUrl' : IDL.Text,
-  'address' : IDL.Text,
-  'phone' : IDL.Text,
+  'github' : IDL.Text,
 });
 export const ContactMessage = IDL.Record({
-  'subject' : IDL.Text,
   'name' : IDL.Text,
   'email' : IDL.Text,
   'message' : IDL.Text,
@@ -62,7 +60,7 @@ export const idlService = IDL.Service({
   'getContactInfo' : IDL.Func([], [ContactInfo], ['query']),
   'getContactMessages' : IDL.Func([], [IDL.Vec(ContactMessage)], ['query']),
   'submitContactMessage' : IDL.Func(
-      [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
+      [IDL.Text, IDL.Text, IDL.Text],
       [IDL.Text],
       [],
     ),
@@ -83,13 +81,11 @@ export const idlFactory = ({ IDL }) => {
     'topped_up_amount' : IDL.Opt(IDL.Nat),
   });
   const ContactInfo = IDL.Record({
+    'linkedin' : IDL.Text,
     'email' : IDL.Text,
-    'googleMapsUrl' : IDL.Text,
-    'address' : IDL.Text,
-    'phone' : IDL.Text,
+    'github' : IDL.Text,
   });
   const ContactMessage = IDL.Record({
-    'subject' : IDL.Text,
     'name' : IDL.Text,
     'email' : IDL.Text,
     'message' : IDL.Text,
@@ -125,7 +121,7 @@ export const idlFactory = ({ IDL }) => {
     'getContactInfo' : IDL.Func([], [ContactInfo], ['query']),
     'getContactMessages' : IDL.Func([], [IDL.Vec(ContactMessage)], ['query']),
     'submitContactMessage' : IDL.Func(
-        [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
+        [IDL.Text, IDL.Text, IDL.Text],
         [IDL.Text],
         [],
       ),

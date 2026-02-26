@@ -1,351 +1,298 @@
 {
   "kind": "build_request",
-  "title": "Department of AI & Data Science – Priyadarshini Engineering College Website",
-  "projectName": "AI & DS Department",
-  "priority": "normal",
+  "title": "Build Afnan Tahib Personal Portfolio Website",
+  "projectName": "Afnan Tahib Portfolio",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Implement a Hero section with the department name 'Department of Artificial Intelligence and Data Science – Priyadarshini Engineering College', tagline 'Innovating the Future with AI & Data Science', an AI-themed abstract animated background graphic, and two CTA buttons: 'Explore Programs' (smooth-scrolls to Programs section) and 'Contact Us' (smooth-scrolls to Contact section).",
+      "id": "REQ-16",
+      "text": "Rebuild the entire frontend as a personal portfolio for Afnan Tahib. Replace all existing department-focused sections with a fully responsive single-page portfolio using a dark theme with blue/purple AI-inspired gradients, subtle glassmorphism UI, hover effects, micro-interactions, and smooth scroll animations. Apply consistent dark background colors, glassy card surfaces, and blue-to-purple gradient accents throughout every section and component. Use a modern sans-serif heading font paired with a clean body font. All existing department sections (Programs, Faculty, Labs, Placements, Research, Events, Achievements as department-centric) must be replaced with the personal portfolio sections described in subsequent requirements.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Hero Section",
-          "Department name",
-          "Tagline: \"Innovating the Future with AI & Data Science\"",
-          "Call-to-action buttons (Explore Programs, Contact Us)"
+          "Clean, modern, and professional",
+          "Dark theme with blue/purple AI-inspired gradients",
+          "Smooth scroll animations",
+          "Subtle glassmorphism UI",
+          "Hover effects and micro-interactions",
+          "Fully responsive (mobile, tablet, desktop)"
         ]
       },
       "acceptanceCriteria": [
-        "Department name and tagline are prominently displayed in the hero.",
-        "AI-themed abstract graphic (generated image) is rendered as background.",
-        "Both CTA buttons scroll smoothly to their target sections.",
-        "Section is fully responsive on mobile, tablet, and desktop."
+        "Site renders on a dark background throughout all sections",
+        "Blue/purple gradient accents are visible on headings, buttons, and card borders",
+        "Glassmorphism effect (backdrop blur, semi-transparent surfaces) is applied to cards and nav",
+        "All interactive cards and buttons have hover transitions/micro-interactions",
+        "Layout is fully responsive on mobile (< 768px), tablet (768–1024px), and desktop (> 1024px)",
+        "Smooth scroll behavior is active for all anchor/CTA navigation"
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Implement an About the Department section containing: a Vision statement, a Mission statement, a brief introduction paragraph about the AI & Data Science field, and three key highlight cards showing Established Year, Intake Capacity, and Accreditation status.",
+      "id": "REQ-17",
+      "text": "Implement a full-screen Hero section with: large bold name 'Afnan Tahib', subtitle 'AI & Data Science Undergraduate', intro text 'Passionate about Machine Learning, Data Analytics, and building intelligent solutions that solve real-world problems.', two CTA buttons ('View Projects' smooth-scrolls to the Projects section, 'Contact Me' smooth-scrolls to the Contact section), and a live animated neural network or abstract AI grid canvas effect as the background.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "About the Department",
-          "Vision and Mission",
-          "Brief introduction about AI & DS field",
-          "Key highlights (Established year, intake capacity, accreditation)"
+          "Large bold name display: Afnan Tahib",
+          "Subtitle: AI & Data Science Undergraduate",
+          "Passionate about Machine Learning, Data Analytics, and building intelligent solutions that solve real-world problems.",
+          "CTA Buttons: View Projects, Contact Me",
+          "Background with animated neural network or abstract AI grid effect"
         ]
       },
       "acceptanceCriteria": [
-        "Vision and Mission are displayed as distinct labeled subsections.",
-        "At least one paragraph of introductory text about AI & DS is shown.",
-        "Three highlight cards are visible with icons and labels for Established Year, Intake Capacity, and Accreditation.",
-        "Layout adjusts gracefully on all screen sizes."
+        "Hero section occupies the full viewport height",
+        "'Afnan Tahib' is displayed in a large, bold heading",
+        "Subtitle 'AI & Data Science Undergraduate' is shown below the name",
+        "Intro paragraph text is present",
+        "'View Projects' button scrolls smoothly to the Projects section",
+        "'Contact Me' button scrolls smoothly to the Contact section",
+        "Animated neural network or AI grid effect is rendered as the section background"
       ]
     },
     {
-      "id": "REQ-3",
-      "text": "Implement a Programs Offered section with a card for B.Tech in AI & Data Science (including curriculum highlights such as core subjects and electives) and a placeholder card for a future M.Tech program indicating it is 'Coming Soon'.",
+      "id": "REQ-18",
+      "text": "Implement an About Me section with the following personal details: currently pursuing B.Tech in Artificial Intelligence & Data Science at Priyadarshini Engineering College, Vaniyambadi; career goal of Aspiring AI Engineer and Research Enthusiast; strong interest in ML, Data Science, and intelligent systems; strengths: Logical thinking, problem-solving, fast learner. Display this information using a clean card or two-column layout with scroll-triggered animations.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Programs Offered",
-          "B.Tech in AI & Data Science",
-          "Future M.Tech program (placeholder)",
-          "Curriculum highlights"
+          "Currently pursuing B.Tech in Artificial Intelligence & Data Science",
+          "College: Priyadarshini Engineering College, Vaniyambadi",
+          "Career Goal: Aspiring AI Engineer and Research Enthusiast",
+          "Strong interest in ML, Data Science, and intelligent systems",
+          "Strengths: Logical thinking, problem-solving, fast learner"
         ]
       },
       "acceptanceCriteria": [
-        "B.Tech card includes program name, duration, and a list of curriculum highlights.",
-        "M.Tech card is visually distinct and marked as 'Coming Soon'.",
-        "Section is responsive and cards stack on mobile."
+        "Section heading 'About Me' is visible",
+        "College name and degree are displayed",
+        "Career goal statement is shown",
+        "Interests and strengths are listed",
+        "Section content animates in on scroll"
       ]
     },
     {
-      "id": "REQ-4",
-      "text": "Implement a Faculty section displaying faculty member cards in a responsive grid. Each card shows a faculty photo (use the generated placeholder faculty avatar image), name, designation, and area of specialization. Include at least 6 sample faculty entries.",
+      "id": "REQ-19",
+      "text": "Implement a Skills section using animated skill cards or progress bars, grouped into three categories: Programming (Python, C++, SQL), AI/ML (Machine Learning, Deep Learning, Data Analytics, NLP (Basic), Computer Vision (Basic)), and Tools & Libraries (Pandas, NumPy, Scikit-learn, TensorFlow (Basic), Tableau, Power BI, Matplotlib). Each skill entry should display its name and a visual indicator (animated progress bar or badge card). Apply staggered scroll-in animations.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Faculty Section",
-          "Faculty cards with photo, name, designation, specialization"
+          "Skills Section (Animated Cards or Progress Bars)",
+          "Programming: Python, C++, SQL",
+          "AI/ML: Machine Learning, Deep Learning, Data Analytics, NLP (Basic), Computer Vision (Basic)",
+          "Tools & Libraries: Pandas, NumPy, Scikit-learn, TensorFlow (Basic), Tableau, Power BI, Matplotlib"
         ]
       },
       "acceptanceCriteria": [
-        "At least 6 faculty cards are rendered in a responsive grid.",
-        "Each card shows a photo/avatar, name, designation, and specialization.",
-        "Cards have a subtle hover effect (lift or shadow).",
-        "Grid collapses to a single column on mobile."
+        "Three skill categories are displayed with clear headings",
+        "All listed skills appear under their respective category",
+        "Each skill has an animated progress bar or styled badge card",
+        "Animations trigger on scroll into view",
+        "Section is responsive and stacks gracefully on mobile"
       ]
     },
     {
-      "id": "REQ-5",
-      "text": "Implement a Laboratories & Infrastructure section with four cards for: AI Lab, Data Analytics Lab, Computing Facilities, and Smart Classroom. Each card includes an icon, a name, and a short descriptive paragraph about the facility.",
+      "id": "REQ-20",
+      "text": "Implement a Projects section with professional card layout containing exactly two project cards: (1) Title 'FUTURE_DS_01', description 'Data Science and Analytics project showcasing practical implementation of data processing and analysis techniques.', tech stack tags (Python, Data Science, Analytics), and a 'GitHub' button linking to https://github.com/Afnan-Tahib/FUTURE_DS_01; (2) Title 'Sales Performance Dashboard – Superstore Analysis', description 'Interactive Tableau dashboard analyzing sales and profit performance with data visualization insights.', tech stack tags (Tableau, Data Visualization, Analytics), and a 'Live Demo' button linking to https://public.tableau.com/app/profile/afnan.tahib/viz/SalesPerformanceDashboardSuperstoreAnalysis_17717554808110/SalesProfitPerformanceDashboard?publish=yes. Cards should have glassmorphism styling and hover lift effects.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Laboratories & Infrastructure",
-          "AI Lab",
-          "Data Analytics Lab",
-          "Computing Facilities",
-          "Smart Classroom"
+          "Title: FUTURE_DS_01",
+          "GitHub Link: https://github.com/Afnan-Tahib/FUTURE_DS_01",
+          "Title: Sales Performance Dashboard – Superstore Analysis",
+          "Live Project Link: https://public.tableau.com/app/profile/afnan.tahib/viz/SalesPerformanceDashboardSuperstoreAnalysis_17717554808110/SalesProfitPerformanceDashboard?publish=yes",
+          "Each project card should include: Title, Short description, Tech stack used, Button for GitHub / Live Demo"
         ]
       },
       "acceptanceCriteria": [
-        "All four lab/facility cards are present.",
-        "Each card has a distinct icon, heading, and description text.",
-        "Section is responsive across all breakpoints."
+        "Both project cards are rendered with title, description, tech stack tags, and action button",
+        "GitHub button for FUTURE_DS_01 opens https://github.com/Afnan-Tahib/FUTURE_DS_01 in a new tab",
+        "Live Demo button for Sales Dashboard opens the Tableau URL in a new tab",
+        "Cards use glassmorphism styling",
+        "Hover effect lifts or highlights the card"
       ]
     },
     {
-      "id": "REQ-6",
-      "text": "Implement a Student Achievements section with three subsections: Hackathon Wins (list of notable wins with event name and year), Research Publications (list of published papers with title and venue), and Internship Highlights (key companies and roles). Use stat counters or cards as appropriate.",
+      "id": "REQ-21",
+      "text": "Implement an Achievements & Certifications section with three subsections: (1) Online Certifications displayed as badge-style cards with placeholder certification entries; (2) Workshops Attended displayed as a list or cards with placeholder entries; (3) Hackathons & Research as a placeholder subsection indicating upcoming entries. Include scroll animations for each subsection.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Student Achievements",
-          "Hackathon wins",
-          "Research publications",
-          "Internship highlights"
+          "Online Certifications (Display as badge-style cards)",
+          "Workshops Attended",
+          "Add a section for future Hackathons and Research"
         ]
       },
       "acceptanceCriteria": [
-        "Three clearly labeled subsections are present.",
-        "Each subsection contains at least 3 sample entries.",
-        "Animated count-up numbers or highlight cards are used for impact metrics.",
-        "Section is fully responsive."
+        "Section has a clear 'Achievements & Certifications' heading",
+        "Certification cards are styled as badges with placeholder data",
+        "Workshops subsection is present with placeholder entries",
+        "Hackathons & Research subsection is visible with a 'Coming Soon' or placeholder state",
+        "All subsections animate in on scroll"
       ]
     },
     {
-      "id": "REQ-7",
-      "text": "Implement an Events & Workshops section with two parts: an Upcoming Events list (event name, date, brief description) and a Past Events gallery (event thumbnail images arranged in a grid with captions). Use generated images for event thumbnails.",
+      "id": "REQ-22",
+      "text": "Implement an Education section displaying: Degree — B.Tech in Artificial Intelligence & Data Science; Institution — Priyadarshini Engineering College, Vaniyambadi; Status — Undergraduate Student (currently pursuing). Use a clean timeline or card layout with the institution name, degree, and current status prominently displayed.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Events & Workshops",
-          "Upcoming events section",
-          "Past events gallery"
+          "Degree: B.Tech in Artificial Intelligence & Data Science",
+          "Institution: Priyadarshini Engineering College, Vaniyambadi",
+          "Year: Undergraduate Student"
         ]
       },
       "acceptanceCriteria": [
-        "Upcoming events list shows at least 3 sample upcoming events.",
-        "Past events gallery shows at least 4 thumbnail cards with captions.",
-        "Gallery is responsive and wraps correctly on smaller screens.",
-        "Generated event thumbnail images are loaded from frontend/public/assets/generated."
+        "Education section heading is visible",
+        "Degree name, institution, and 'Undergraduate Student' status are all displayed",
+        "Layout uses a timeline or styled card",
+        "Section animates in on scroll"
       ]
     },
     {
-      "id": "REQ-8",
-      "text": "Implement a Placement & Industry Collaboration section showing: placement statistics (placement rate %, average package, highest package) as animated stat cards; a row of partner company logo placeholders; and an internship opportunities subsection with a brief description and a call-to-action.",
+      "id": "REQ-23",
+      "text": "Implement a Resume section containing a prominently styled 'Download Resume' button. The button should link to a placeholder PDF path (e.g., /assets/resume.pdf) and open in a new tab. Include a short label such as 'My Resume' or 'Curriculum Vitae' as the section heading.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Placement & Industry Collaboration",
-          "Placement statistics",
-          "Partner companies logos",
-          "Internship opportunities"
+          "Resume Section",
+          "Download Resume Button (PDF placeholder)"
         ]
       },
       "acceptanceCriteria": [
-        "At least 3 placement stat cards are shown with animated numbers.",
-        "At least 6 partner company logo placeholders are displayed in a horizontal scroll or grid.",
-        "An internship opportunities subsection with descriptive text and a CTA button is present.",
-        "Section is fully responsive."
+        "Section heading 'Resume' or 'Curriculum Vitae' is displayed",
+        "Download Resume button is present and visually prominent",
+        "Button href points to /assets/resume.pdf",
+        "Button opens in a new tab"
       ]
     },
     {
-      "id": "REQ-9",
-      "text": "Implement a Research & Projects section with two subsections: Ongoing Projects (project title, description, team lead) displayed as cards, and a Student Project Showcase (project name, brief description, tech stack tags) displayed as a gallery or grid. Include at least 3 sample entries each.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Research & Projects",
-          "Ongoing projects",
-          "Student project showcase"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Ongoing Projects subsection has at least 3 project cards.",
-        "Student Project Showcase has at least 3 entries with tech stack tags.",
-        "Cards have hover effects and consistent styling.",
-        "Fully responsive layout."
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "text": "Implement a Contact section containing: department address, email address, phone number, an embedded Google Maps iframe placeholder (static image or embedded link pointing to Priyadarshini Engineering College), and a contact form with fields for Name, Email, Subject, and Message with a Submit button. The contact form should store submitted messages in the backend.",
+      "id": "REQ-24",
+      "text": "Implement a Contact section with: contact details showing email afnantahibkondalam@gmail.com, GitHub https://github.com/Afnan-Tahib/FUTURE_DS_01, and LinkedIn https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384 as clickable icons/links; a contact form with fields for Name, Email, and Message with a Submit button that stores submissions in the backend. Style the section with glassmorphism cards and gradient accents.",
       "target": "both",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Contact Section",
-          "Address",
-          "Email",
-          "Phone",
-          "Google Maps integration",
-          "Contact form"
+          "Email: afnantahibkondalam@gmail.com",
+          "GitHub: https://github.com/Afnan-Tahib/FUTURE_DS_01",
+          "LinkedIn: https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384",
+          "Include clickable social media icons",
+          "Add contact form (Name, Email, Message)"
         ]
       },
       "acceptanceCriteria": [
-        "Contact details (address, email, phone) are clearly displayed.",
-        "A map embed or static map placeholder for Priyadarshini Engineering College is shown.",
-        "Contact form fields: Name, Email, Subject, Message are all present with basic validation.",
-        "On submission, form data is saved to the backend canister and a success confirmation is shown to the user.",
-        "Section is fully responsive."
+        "Email, GitHub, and LinkedIn are displayed as clickable links/icons",
+        "GitHub link opens https://github.com/Afnan-Tahib/FUTURE_DS_01 in a new tab",
+        "LinkedIn link opens https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384 in a new tab",
+        "Contact form has Name, Email, and Message fields with a Submit button",
+        "Form submission sends data to the backend and stores it",
+        "Success feedback is shown to the user after submission"
       ]
     },
     {
-      "id": "REQ-11",
-      "text": "Implement a responsive sticky navigation bar with the department name/logo on the left, navigation links to all major sections (About, Programs, Faculty, Labs, Achievements, Events, Placements, Research, Contact) on the right, and a hamburger menu on mobile. Include smooth scroll behavior on nav link clicks.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Fully responsive (mobile + tablet + desktop)",
-          "Smooth animations and hover effects"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Navigation bar is sticky and remains visible on scroll.",
-        "All section links are present and trigger smooth scroll.",
-        "On mobile, a hamburger menu toggles a dropdown nav.",
-        "Active section is highlighted in the nav as user scrolls."
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "text": "Implement a site footer with quick links to all major sections, department contact details, social media icons (LinkedIn, Twitter, YouTube, Instagram), and a copyright notice for the Department of AI & Data Science, Priyadarshini Engineering College.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Include footer with quick links and social media icons"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Footer contains quick navigation links organized in columns.",
-        "Social media icons are present and styled consistently.",
-        "Copyright notice is displayed.",
-        "Footer is responsive and stacks gracefully on mobile."
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "text": "Apply a consistent blue, white, and subtle gradient visual theme throughout the entire site. Use professional academic typography (e.g., a serif or clean sans-serif heading font paired with a readable body font). Add smooth entrance animations on scroll (fade-in / slide-up) for section content, and hover effects on all interactive cards and buttons.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "Clean UI with modern academic look",
-          "Blue, white, and subtle gradient theme",
-          "Professional typography",
-          "Smooth animations and hover effects"
-        ]
-      },
-      "acceptanceCriteria": [
-        "A consistent blue/white/gradient color palette is applied site-wide.",
-        "Heading and body fonts are professional and consistently applied.",
-        "Sections animate into view as the user scrolls (intersection observer).",
-        "All cards and buttons have visible hover transitions.",
-        "No visual inconsistencies between sections."
-      ]
-    },
-    {
-      "id": "REQ-14",
-      "text": "Implement a Motoko backend actor with a `submitContactMessage` update call that accepts Name, Email, Subject, and Message fields and stores them in stable memory. Provide a `getContactMessages` query for admin retrieval.",
+      "id": "REQ-25",
+      "text": "Update the backend contact form submission handler to accept and store portfolio contact messages with fields: name, email, and message (removing the 'subject' field if it conflicts, or making it optional). Ensure the submitContactMessage function accepts these three fields and persists them in stable storage.",
       "target": "backend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Contact form"
+          "Add contact form (Name, Email, Message)"
         ]
       },
       "acceptanceCriteria": [
-        "`submitContactMessage` stores the provided fields with a timestamp.",
-        "`getContactMessages` returns all stored messages.",
-        "Data persists across canister upgrades via stable storage."
+        "submitContactMessage accepts name, email, and message parameters",
+        "Submitted messages are stored in stable backend state",
+        "Function returns a success or error result"
       ]
     },
     {
-      "id": "REQ-15",
-      "text": "Render the following generated images as static assets from frontend/public/assets/generated: the AI abstract hero background, faculty avatar placeholder, and past event thumbnails.",
+      "id": "REQ-26",
+      "text": "Implement a site footer with: quick navigation links to all major sections (About, Skills, Projects, Achievements, Education, Resume, Contact); social media icons linking to GitHub (https://github.com/Afnan-Tahib/FUTURE_DS_01) and LinkedIn (https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384); and a minimal copyright line reading '© 2024 Afnan Tahib. All rights reserved.'",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "Background with AI-related abstract graphics",
-          "Faculty cards with photo",
-          "Past events gallery"
+          "Footer with quick navigation links",
+          "Social media icons",
+          "Clean minimal copyright line"
         ]
       },
       "acceptanceCriteria": [
-        "All generated image assets are referenced from frontend/public/assets/generated.",
-        "Images load correctly in production and development builds.",
-        "Appropriate alt text is provided for all images."
+        "Footer contains quick navigation links to all major portfolio sections",
+        "GitHub and LinkedIn icons are clickable and link to the correct URLs",
+        "Copyright notice is displayed",
+        "Footer is responsive and visually consistent with the dark theme"
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "text": "Implement a responsive sticky navigation bar for the portfolio with 'Afnan Tahib' as the brand/logo text on the left, and navigation links (About, Skills, Projects, Achievements, Education, Resume, Contact) on the right. Each link smoothly scrolls to its corresponding section. Include a hamburger menu on mobile that expands to show nav links. Apply glassmorphism background on scroll.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Fully responsive (mobile, tablet, desktop)",
+          "Smooth scroll animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation bar is sticky and visible at the top on all screen sizes",
+        "Brand name 'Afnan Tahib' is shown on the left",
+        "All section links are present and functional",
+        "Clicking a nav link smoothly scrolls to the corresponding section",
+        "Hamburger menu appears on mobile and toggles nav links",
+        "Nav bar gets a glassy/frosted background on scroll"
       ]
     }
   ],
   "constraints": [
-    "Use blue, white, and subtle gradient color palette as explicitly specified by the user.",
-    "All Motoko logic must remain in a single main actor file (backend/main.mo).",
-    "Do not edit any files under frontend/src/hooks/ or frontend/src/components/ui.",
-    "Contact form data must be stored on-chain in the Motoko backend, not in an external service.",
-    "Google Maps integration must use a static embed/iframe only; no geolocation APIs."
+    "Do not modify files under frontend/src/hooks/ (useInternetIdentity.ts, useActor.ts) or frontend/src/main.tsx",
+    "Do not modify files under frontend/src/components/ui/",
+    "All generated images must be served as static assets from frontend/public/assets/generated",
+    "Backend must remain a single Motoko actor in backend/main.mo"
   ],
   "nonGoals": [
-    "User authentication or login for site visitors.",
-    "Real-time features such as live chat or WebSocket connections.",
-    "External email sending for contact form submissions.",
-    "CMS or admin dashboard for editing website content dynamically.",
-    "Multi-language (i18n) support.",
-    "Payment or e-commerce features."
+    "Do not retain any department-specific sections (Faculty, Programs, Labs, Placements, Events, Research as department features)",
+    "Do not implement Internet Identity authentication for the portfolio",
+    "Do not implement a CMS or admin panel for managing portfolio content",
+    "Do not integrate external APIs beyond the ICP backend actor"
   ],
   "imageRequirements": {
     "required": [
-      "Abstract AI neural network visualization with glowing nodes and connecting lines on a deep blue background, suitable for a full-width hero banner (hero-ai-bg.dim_1920x1080.png)",
-      "Neutral professional silhouette avatar for faculty member placeholder, clean white background with subtle blue accent (faculty-avatar.dim_400x400.png)",
-      "Event thumbnail showing a group of students at a tech workshop with laptops, bright academic environment (event-thumb-1.dim_800x500.png)",
-      "Event thumbnail showing a hackathon competition setting with coding screens and energy (event-thumb-2.dim_800x500.png)",
-      "Event thumbnail showing a seminar/guest lecture with a speaker at a podium and audience (event-thumb-3.dim_800x500.png)",
-      "Event thumbnail showing an AI demonstration or robotics showcase in a lab setting (event-thumb-4.dim_800x500.png)"
+      "Animated neural network / AI grid abstract dark background with blue and purple glowing nodes and connecting lines (hero-neural-bg.dim_1920x1080.png)",
+      "Professional avatar/profile silhouette illustration in dark blue and purple gradient style for the About Me section (profile-avatar.dim_400x400.png)"
     ],
     "edits": []
   }

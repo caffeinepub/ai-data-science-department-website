@@ -1,16 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Menu, X, Brain } from 'lucide-react';
+import { Menu, X, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
   { label: 'About', href: '#about' },
-  { label: 'Programs', href: '#programs' },
-  { label: 'Faculty', href: '#faculty' },
-  { label: 'Labs', href: '#labs' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Achievements', href: '#achievements' },
-  { label: 'Events', href: '#events' },
-  { label: 'Placements', href: '#placements' },
-  { label: 'Research', href: '#research' },
+  { label: 'Education', href: '#education' },
+  { label: 'Resume', href: '#resume' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -20,7 +18,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = useCallback(() => {
-    setScrolled(window.scrollY > 20);
+    setScrolled(window.scrollY > 50);
 
     const sections = navLinks.map((l) => l.href.slice(1));
     let current = '';
@@ -28,7 +26,7 @@ export default function Navigation() {
       const el = document.getElementById(id);
       if (el) {
         const rect = el.getBoundingClientRect();
-        if (rect.top <= 100) current = id;
+        if (rect.top <= 120) current = id;
       }
     }
     setActiveSection(current);
@@ -50,24 +48,26 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-brand-blue-pale'
+          ? 'glass border-b border-ai-dark-border shadow-card-dark'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-9 h-9 rounded-lg gradient-blue-accent flex items-center justify-center shadow-blue">
-              <Brain className="w-5 h-5 text-white" />
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center gap-2.5 flex-shrink-0 group"
+          >
+            <div className="w-9 h-9 rounded-xl gradient-ai flex items-center justify-center shadow-ai-glow group-hover:shadow-ai-glow-lg transition-all duration-300">
+              <Cpu className="w-5 h-5 text-white" />
             </div>
-            <div className="hidden sm:block">
-              <p className="text-xs font-semibold leading-tight text-brand-navy">Dept. of AI & Data Science</p>
-              <p className="text-xs text-brand-blue-mid leading-tight">Priyadarshini Engineering College</p>
-            </div>
-          </div>
+            <span className="font-bold text-white text-sm sm:text-base tracking-tight">
+              Afnan<span className="text-gradient-ai"> Tahib</span>
+            </span>
+          </button>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
@@ -75,10 +75,10 @@ export default function Navigation() {
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
+                className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200 ${
                   activeSection === link.href.slice(1)
-                    ? 'text-brand-blue-bright bg-brand-blue-pale font-semibold'
-                    : 'text-brand-navy hover:text-brand-blue-bright hover:bg-brand-blue-pale'
+                    ? 'text-ai-blue bg-ai-blue/10 font-semibold'
+                    : 'text-white/70 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {link.label}
@@ -90,7 +90,7 @@ export default function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-brand-navy"
+            className="lg:hidden text-white hover:bg-white/10"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -101,16 +101,16 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white/98 backdrop-blur-md border-t border-brand-blue-pale shadow-lg">
+        <div className="lg:hidden glass border-t border-ai-dark-border">
           <div className="px-4 py-3 space-y-1">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className={`w-full text-left px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 ${
+                className={`w-full text-left px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-200 ${
                   activeSection === link.href.slice(1)
-                    ? 'text-brand-blue-bright bg-brand-blue-pale font-semibold'
-                    : 'text-brand-navy hover:text-brand-blue-bright hover:bg-brand-blue-pale'
+                    ? 'text-ai-blue bg-ai-blue/10 font-semibold'
+                    : 'text-white/70 hover:text-white hover:bg-white/5'
                 }`}
               >
                 {link.label}

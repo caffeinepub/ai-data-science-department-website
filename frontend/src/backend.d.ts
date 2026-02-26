@@ -8,19 +8,17 @@ export interface None {
 }
 export type Option<T> = Some<T> | None;
 export interface ContactMessage {
-    subject: string;
     name: string;
     email: string;
     message: string;
 }
 export interface ContactInfo {
+    linkedin: string;
     email: string;
-    googleMapsUrl: string;
-    address: string;
-    phone: string;
+    github: string;
 }
 export interface backendInterface {
     getContactInfo(): Promise<ContactInfo>;
     getContactMessages(): Promise<Array<ContactMessage>>;
-    submitContactMessage(name: string, email: string, subject: string, message: string): Promise<string>;
+    submitContactMessage(name: string, email: string, message: string): Promise<string>;
 }

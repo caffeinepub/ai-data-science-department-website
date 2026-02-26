@@ -4,22 +4,22 @@ import Order "mo:core/Order";
 import Storage "blob-storage/Storage";
 import Runtime "mo:core/Runtime";
 import MixinStorage "blob-storage/Mixin";
+import Migration "migration";
 
+(with migration = Migration.run)
 actor {
   include MixinStorage();
 
   type ContactMessage = {
     name : Text;
     email : Text;
-    subject : Text;
     message : Text;
   };
 
   type ContactInfo = {
-    address : Text;
     email : Text;
-    phone : Text;
-    googleMapsUrl : Text;
+    github : Text;
+    linkedin : Text;
   };
 
   module ContactMessage {
@@ -31,21 +31,19 @@ actor {
   let contactMessages = Map.empty<Text, ContactMessage>();
 
   let contactInfo : ContactInfo = {
-    address = "Priyadarshini Engineering College, CRPF Road, Near CRPF Camp, Bara Ghaghra, Bhurkunda, Ranchi, Jharkhand 834010";
-    email = "contact@priyadarshini.edu.in";
-    phone = "+91 12345 67890";
-    googleMapsUrl = "https://maps.google.com/?q=bhurkunda";
+    email = "afnantahibkondalam@gmail.com";
+    github = "https://github.com/Afnan-Tahib/FUTURE_DS_01";
+    linkedin = "https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384";
   };
 
-  public shared ({ caller }) func submitContactMessage(name : Text, email : Text, subject : Text, message : Text) : async Text {
-    if (name.size() == 0 or email.size() == 0 or subject.size() == 0 or message.size() == 0) {
+  public shared ({ caller }) func submitContactMessage(name : Text, email : Text, message : Text) : async Text {
+    if (name.size() == 0 or email.size() == 0 or message.size() == 0) {
       Runtime.trap("All fields are required");
     };
 
     let contactMessage : ContactMessage = {
       name;
       email;
-      subject;
       message;
     };
 

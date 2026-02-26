@@ -1,17 +1,42 @@
 import { useState } from 'react';
-import { MapPin, Mail, Phone, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Send, CheckCircle, AlertCircle, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
+import { toast } from 'sonner';
 import ScrollAnimation from './ScrollAnimation';
-import { useContactInfo, useSubmitContactMessage } from '../hooks/useQueries';
+import { useSubmitContactMessage } from '../hooks/useQueries';
+
+const socialLinks = [
+  {
+    icon: Mail,
+    label: 'Email',
+    value: 'afnantahibkondalam@gmail.com',
+    href: 'mailto:afnantahibkondalam@gmail.com',
+    color: 'text-ai-blue',
+    bg: 'bg-ai-blue/10 border-ai-blue/30 hover:border-ai-blue/60',
+  },
+  {
+    icon: Github,
+    label: 'GitHub',
+    value: 'Afnan-Tahib',
+    href: 'https://github.com/Afnan-Tahib/FUTURE_DS_01',
+    color: 'text-white',
+    bg: 'bg-white/5 border-white/20 hover:border-white/40',
+  },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    value: 'afnan-tahib-kundalam',
+    href: 'https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384',
+    color: 'text-ai-cyan',
+    bg: 'bg-ai-cyan/10 border-ai-cyan/30 hover:border-ai-cyan/60',
+  },
+];
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  const { data: contactInfo } = useContactInfo();
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
   const submitMutation = useSubmitContactMessage();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -20,158 +45,127 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.subject || !form.message) return;
+    if (!form.name || !form.email || !form.message) return;
 
     try {
       await submitMutation.mutateAsync(form);
-      setSubmitted(true);
-      setForm({ name: '', email: '', subject: '', message: '' });
+      toast.success('Message sent successfully!', {
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      setForm({ name: '', email: '', message: '' });
     } catch {
-      // error handled via mutation state
+      toast.error('Failed to send message', {
+        description: 'Please try again or reach out via email directly.',
+      });
     }
   };
 
-  const address = contactInfo?.address ?? 'Priyadarshini Engineering College, CRPF Road, Near CRPF Camp, Bara Ghaghra, Bhurkunda, Ranchi, Jharkhand 834010';
-  const email = contactInfo?.email ?? 'contact@priyadarshini.edu.in';
-  const phone = contactInfo?.phone ?? '+91 12345 67890';
-
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-white">
+    <section id="contact" className="py-20 lg:py-28 section-darker">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation>
-          <p className="text-brand-blue-bright text-sm font-semibold uppercase tracking-widest text-center mb-2">
-            Get In Touch
-          </p>
-          <h2 className="section-title">Contact Us</h2>
-          <p className="section-subtitle">
-            Have questions about our programs, admissions, or research? We'd love to hear from you.
-          </p>
+          <div className="text-center mb-16">
+            <span className="badge-ai mb-4 inline-block">Get In Touch</span>
+            <h2 className="section-title-ai text-white mt-3">
+              Let's <span className="text-gradient-ai">Connect</span>
+            </h2>
+            <p className="section-subtitle-ai">
+              Have a project idea, collaboration opportunity, or just want to say hi?
+            </p>
+          </div>
         </ScrollAnimation>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Info + Map */}
-          <ScrollAnimation delay={100} direction="left">
+        <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+          {/* Contact Info */}
+          <ScrollAnimation direction="left">
             <div className="space-y-6">
-              {/* Contact Details */}
-              <div className="bg-gradient-to-br from-brand-navy to-brand-blue-mid rounded-2xl p-8 text-white">
-                <h3 className="text-xl font-bold font-heading mb-6">Department Contact</h3>
-                <div className="space-y-5">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white/90 mb-0.5">Address</p>
-                      <p className="text-sm text-white/70 leading-relaxed">{address}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white/90 mb-0.5">Email</p>
-                      <a href={`mailto:${email}`} className="text-sm text-white/70 hover:text-white transition-colors">
-                        {email}
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-white/90 mb-0.5">Phone</p>
-                      <a href={`tel:${phone}`} className="text-sm text-white/70 hover:text-white transition-colors">
-                        {phone}
-                      </a>
-                    </div>
-                  </div>
+              <div className="glass-card rounded-2xl p-8 border border-ai-blue/20">
+                <h3 className="text-xl font-bold text-white mb-2">Say Hello 👋</h3>
+                <p className="text-white/60 text-sm leading-relaxed mb-8">
+                  I'm always open to discussing new projects, creative ideas, or opportunities
+                  to be part of your vision. Feel free to reach out through any of the channels below.
+                </p>
+
+                <div className="space-y-4">
+                  {socialLinks.map(({ icon: Icon, label, value, href, color, bg }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target={href.startsWith('mailto') ? undefined : '_blank'}
+                      rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                      className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-300 hover:-translate-y-0.5 ${bg}`}
+                    >
+                      <div className={`w-10 h-10 rounded-lg glass flex items-center justify-center flex-shrink-0 ${color}`}>
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold text-white/50 uppercase tracking-wider">{label}</p>
+                        <p className={`text-sm font-medium ${color}`}>{value}</p>
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
 
-              {/* Map */}
-              <div className="rounded-2xl overflow-hidden border border-brand-blue-pale shadow-card">
-                <iframe
-                  title="Priyadarshini Engineering College Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.5!2d85.3!3d23.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e1b1b1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sPriyadarshini%20Engineering%20College!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                  width="100%"
-                  height="280"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+              {/* Availability badge */}
+              <div className="glass-card rounded-2xl p-5 border border-ai-dark-border flex items-center gap-4">
+                <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-white">Available for Opportunities</p>
+                  <p className="text-xs text-white/50">Open to internships, collaborations & projects</p>
+                </div>
               </div>
             </div>
           </ScrollAnimation>
 
           {/* Contact Form */}
-          <ScrollAnimation delay={200} direction="right">
-            <div className="bg-white rounded-2xl border border-brand-blue-pale shadow-card p-8">
-              <h3 className="text-xl font-bold text-brand-navy font-heading mb-6">Send Us a Message</h3>
-
-              {submitted && !submitMutation.isError && (
-                <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-green-800">Message Sent Successfully!</p>
-                    <p className="text-xs text-green-600">We'll get back to you within 24–48 hours.</p>
-                  </div>
-                </div>
-              )}
+          <ScrollAnimation direction="right">
+            <div className="glass-card rounded-2xl p-8 border border-ai-purple/20">
+              <h3 className="text-xl font-bold text-white mb-6">Send a Message</h3>
 
               {submitMutation.isError && (
-                <div className="flex items-center gap-3 bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
-                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
-                  <p className="text-sm text-red-700">Failed to send message. Please try again.</p>
+                <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 rounded-xl p-4 mb-6">
+                  <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                  <p className="text-sm text-red-400">Failed to send. Please try again.</p>
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <Label htmlFor="name" className="text-sm font-medium text-brand-navy">Full Name *</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="Your full name"
-                      required
-                      className="border-brand-blue-pale focus:border-brand-blue-bright focus:ring-brand-blue-bright/20"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <Label htmlFor="email" className="text-sm font-medium text-brand-navy">Email Address *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={form.email}
-                      onChange={handleChange}
-                      placeholder="your@email.com"
-                      required
-                      className="border-brand-blue-pale focus:border-brand-blue-bright focus:ring-brand-blue-bright/20"
-                    />
-                  </div>
-                </div>
-
                 <div className="space-y-1.5">
-                  <Label htmlFor="subject" className="text-sm font-medium text-brand-navy">Subject *</Label>
+                  <Label htmlFor="name" className="text-sm font-medium text-white/70">
+                    Full Name <span className="text-ai-blue">*</span>
+                  </Label>
                   <Input
-                    id="subject"
-                    name="subject"
-                    value={form.subject}
+                    id="name"
+                    name="name"
+                    value={form.name}
                     onChange={handleChange}
-                    placeholder="What is this regarding?"
+                    placeholder="Your full name"
                     required
-                    className="border-brand-blue-pale focus:border-brand-blue-bright focus:ring-brand-blue-bright/20"
+                    className="bg-white/5 border-ai-dark-border text-white placeholder:text-white/30 focus:border-ai-blue/60 focus:ring-ai-blue/20"
                   />
                 </div>
 
                 <div className="space-y-1.5">
-                  <Label htmlFor="message" className="text-sm font-medium text-brand-navy">Message *</Label>
+                  <Label htmlFor="email" className="text-sm font-medium text-white/70">
+                    Email Address <span className="text-ai-blue">*</span>
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="your@email.com"
+                    required
+                    className="bg-white/5 border-ai-dark-border text-white placeholder:text-white/30 focus:border-ai-blue/60 focus:ring-ai-blue/20"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <Label htmlFor="message" className="text-sm font-medium text-white/70">
+                    Message <span className="text-ai-blue">*</span>
+                  </Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -180,14 +174,14 @@ export default function Contact() {
                     placeholder="Write your message here..."
                     required
                     rows={5}
-                    className="border-brand-blue-pale focus:border-brand-blue-bright focus:ring-brand-blue-bright/20 resize-none"
+                    className="bg-white/5 border-ai-dark-border text-white placeholder:text-white/30 focus:border-ai-blue/60 focus:ring-ai-blue/20 resize-none"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   disabled={submitMutation.isPending}
-                  className="w-full gradient-blue-accent text-white font-semibold py-3 rounded-xl hover:opacity-90 hover:scale-[1.01] transition-all duration-300 group"
+                  className="w-full gradient-ai text-white font-semibold py-3 rounded-xl shadow-ai-glow hover:shadow-ai-glow-lg hover:-translate-y-0.5 transition-all duration-300 group border-0"
                 >
                   {submitMutation.isPending ? (
                     <span className="flex items-center gap-2">

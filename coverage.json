@@ -1,324 +1,165 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T18:11:04.016Z",
+  "generatedAt": "2026-02-25T18:29:29.827Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 15,
-    "implemented": 14,
+    "total": 12,
+    "implemented": 11,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Implement a Hero section with the department name 'Department of Artificial Intelligence and Data Science – Priyadarshini Engineering College', tagline 'Innovating the Future with AI & Data Science', an AI-themed abstract animated background graphic, and two CTA buttons: 'Explore Programs' (smooth-scrolls to Programs section) and 'Contact Us' (smooth-scrolls to Contact section).",
+        "id": "REQ-16",
+        "summary": "Rebuild the entire frontend as a personal portfolio for Afnan Tahib. Replace all existing department-focused sections with a fully responsive single-page portfolio using a dark theme with blue/purple AI-inspired gradients, subtle glassmorphism UI, hover effects, micro-interactions, and smooth scroll animations. Apply consistent dark background colors, glassy card surfaces, and blue-to-purple gradient accents throughout every section and component. Use a modern sans-serif heading font paired with a clean body font. All existing department sections (Programs, Faculty, Labs, Placements, Research, Events, Achievements as department-centric) must be replaced with the personal portfolio sections described in subsequent requirements.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Hero.tsx",
           "frontend/src/App.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Hero.tsx",
           "frontend/src/App.tsx"
         ]
       },
       {
-        "id": "REQ-10",
-        "summary": "Implement a Contact section containing: department address, email address, phone number, an embedded Google Maps iframe placeholder (static image or embedded link pointing to Priyadarshini Engineering College), and a contact form with fields for Name, Email, Subject, and Message with a Submit button. The contact form should store submitted messages in the backend.",
+        "id": "REQ-17",
+        "summary": "Implement a full-screen Hero section with: large bold name 'Afnan Tahib', subtitle 'AI & Data Science Undergraduate', intro text 'Passionate about Machine Learning, Data Analytics, and building intelligent solutions that solve real-world problems.', two CTA buttons ('View Projects' smooth-scrolls to the Projects section, 'Contact Me' smooth-scrolls to the Contact section), and a live animated neural network or abstract AI grid canvas effect as the background.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Hero.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Hero.tsx"
+        ]
+      },
+      {
+        "id": "REQ-18",
+        "summary": "Implement an About Me section with the following personal details: currently pursuing B.Tech in Artificial Intelligence & Data Science at Priyadarshini Engineering College, Vaniyambadi; career goal of Aspiring AI Engineer and Research Enthusiast; strong interest in ML, Data Science, and intelligent systems; strengths: Logical thinking, problem-solving, fast learner. Display this information using a clean card or two-column layout with scroll-triggered animations.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/About.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/About.tsx"
+        ]
+      },
+      {
+        "id": "REQ-19",
+        "summary": "Implement a Skills section using animated skill cards or progress bars, grouped into three categories: Programming (Python, C++, SQL), AI/ML (Machine Learning, Deep Learning, Data Analytics, NLP (Basic), Computer Vision (Basic)), and Tools & Libraries (Pandas, NumPy, Scikit-learn, TensorFlow (Basic), Tableau, Power BI, Matplotlib). Each skill entry should display its name and a visual indicator (animated progress bar or badge card). Apply staggered scroll-in animations.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Skills.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Skills.tsx"
+        ]
+      },
+      {
+        "id": "REQ-20",
+        "summary": "Implement a Projects section with professional card layout containing exactly two project cards: (1) Title 'FUTURE_DS_01', description 'Data Science and Analytics project showcasing practical implementation of data processing and analysis techniques.', tech stack tags (Python, Data Science, Analytics), and a 'GitHub' button linking to https://github.com/Afnan-Tahib/FUTURE_DS_01; (2) Title 'Sales Performance Dashboard – Superstore Analysis', description 'Interactive Tableau dashboard analyzing sales and profit performance with data visualization insights.', tech stack tags (Tableau, Data Visualization, Analytics), and a 'Live Demo' button linking to https://public.tableau.com/app/profile/afnan.tahib/viz/SalesPerformanceDashboardSuperstoreAnalysis_17717554808110/SalesProfitPerformanceDashboard?publish=yes. Cards should have glassmorphism styling and hover lift effects.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Projects.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Projects.tsx"
+        ]
+      },
+      {
+        "id": "REQ-21",
+        "summary": "Implement an Achievements & Certifications section with three subsections: (1) Online Certifications displayed as badge-style cards with placeholder certification entries; (2) Workshops Attended displayed as a list or cards with placeholder entries; (3) Hackathons & Research as a placeholder subsection indicating upcoming entries. Include scroll animations for each subsection.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Achievements.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Achievements.tsx"
+        ]
+      },
+      {
+        "id": "REQ-22",
+        "summary": "Implement an Education section displaying: Degree — B.Tech in Artificial Intelligence & Data Science; Institution — Priyadarshini Engineering College, Vaniyambadi; Status — Undergraduate Student (currently pursuing). Use a clean timeline or card layout with the institution name, degree, and current status prominently displayed.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Education.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Education.tsx"
+        ]
+      },
+      {
+        "id": "REQ-23",
+        "summary": "Implement a Resume section containing a prominently styled 'Download Resume' button. The button should link to a placeholder PDF path (e.g., /assets/resume.pdf) and open in a new tab. Include a short label such as 'My Resume' or 'Curriculum Vitae' as the section heading.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Resume.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Resume.tsx"
+        ]
+      },
+      {
+        "id": "REQ-24",
+        "summary": "Implement a Contact section with: contact details showing email afnantahibkondalam@gmail.com, GitHub https://github.com/Afnan-Tahib/FUTURE_DS_01, and LinkedIn https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384 as clickable icons/links; a contact form with fields for Name, Email, and Message with a Submit button that stores submissions in the backend. Style the section with glassmorphism cards and gradient accents.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/Contact.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/hooks/useQueries.ts"
         ],
         "matchedFiles": [
           "frontend/src/components/Contact.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/hooks/useQueries.ts"
         ]
       },
       {
-        "id": "REQ-11",
-        "summary": "Implement a responsive sticky navigation bar with the department name/logo on the left, navigation links to all major sections (About, Programs, Faculty, Labs, Achievements, Events, Placements, Research, Contact) on the right, and a hamburger menu on mobile. Include smooth scroll behavior on nav link clicks.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Navigation.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Navigation.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-12",
-        "summary": "Implement a site footer with quick links to all major sections, department contact details, social media icons (LinkedIn, Twitter, YouTube, Instagram), and a copyright notice for the Department of AI & Data Science, Priyadarshini Engineering College.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Footer.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Footer.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-13",
-        "summary": "Apply a consistent blue, white, and subtle gradient visual theme throughout the entire site. Use professional academic typography (e.g., a serif or clean sans-serif heading font paired with a readable body font). Add smooth entrance animations on scroll (fade-in / slide-up) for section content, and hover effects on all interactive cards and buttons.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js",
-          "frontend/src/components/ScrollAnimation.tsx",
-          "frontend/src/components/Hero.tsx",
-          "frontend/src/components/About.tsx",
-          "frontend/src/components/Programs.tsx",
-          "frontend/src/components/Faculty.tsx",
-          "frontend/src/components/Labs.tsx",
-          "frontend/src/components/Achievements.tsx",
-          "frontend/src/components/Events.tsx",
-          "frontend/src/components/Placements.tsx",
-          "frontend/src/components/Research.tsx",
-          "frontend/src/components/Contact.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js",
-          "frontend/src/components/ScrollAnimation.tsx",
-          "frontend/src/components/Hero.tsx",
-          "frontend/src/components/About.tsx",
-          "frontend/src/components/Programs.tsx",
-          "frontend/src/components/Faculty.tsx",
-          "frontend/src/components/Labs.tsx",
-          "frontend/src/components/Achievements.tsx",
-          "frontend/src/components/Events.tsx",
-          "frontend/src/components/Placements.tsx",
-          "frontend/src/components/Research.tsx",
-          "frontend/src/components/Contact.tsx"
-        ]
-      },
-      {
-        "id": "REQ-14",
-        "summary": "Implement a Motoko backend actor with a `submitContactMessage` update call that accepts Name, Email, Subject, and Message fields and stores them in stable memory. Provide a `getContactMessages` query for admin retrieval.",
+        "id": "REQ-25",
+        "summary": "Update the backend contact form submission handler to accept and store portfolio contact messages with fields: name, email, and message (removing the 'subject' field if it conflicts, or making it optional). Ensure the submitContactMessage function accepts these three fields and persists them in stable storage.",
         "status": "unknown",
         "plannedFiles": [],
         "matchedFiles": []
       },
       {
-        "id": "REQ-15",
-        "summary": "Render the following generated images as static assets from frontend/public/assets/generated: the AI abstract hero background, faculty avatar placeholder, and past event thumbnails.",
+        "id": "REQ-26",
+        "summary": "Implement a site footer with: quick navigation links to all major sections (About, Skills, Projects, Achievements, Education, Resume, Contact); social media icons linking to GitHub (https://github.com/Afnan-Tahib/FUTURE_DS_01) and LinkedIn (https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384); and a minimal copyright line reading '© 2024 Afnan Tahib. All rights reserved.'",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Hero.tsx",
-          "frontend/src/components/Faculty.tsx",
-          "frontend/src/components/Events.tsx"
+          "frontend/src/components/Footer.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Hero.tsx",
-          "frontend/src/components/Faculty.tsx",
-          "frontend/src/components/Events.tsx"
+          "frontend/src/components/Footer.tsx"
         ]
       },
       {
-        "id": "REQ-2",
-        "summary": "Implement an About the Department section containing: a Vision statement, a Mission statement, a brief introduction paragraph about the AI & Data Science field, and three key highlight cards showing Established Year, Intake Capacity, and Accreditation status.",
+        "id": "REQ-27",
+        "summary": "Implement a responsive sticky navigation bar for the portfolio with 'Afnan Tahib' as the brand/logo text on the left, and navigation links (About, Skills, Projects, Achievements, Education, Resume, Contact) on the right. Each link smoothly scrolls to its corresponding section. Include a hamburger menu on mobile that expands to show nav links. Apply glassmorphism background on scroll.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/About.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/Navigation.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/About.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Implement a Programs Offered section with a card for B.Tech in AI & Data Science (including curriculum highlights such as core subjects and electives) and a placeholder card for a future M.Tech program indicating it is 'Coming Soon'.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Programs.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Programs.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-4",
-        "summary": "Implement a Faculty section displaying faculty member cards in a responsive grid. Each card shows a faculty photo (use the generated placeholder faculty avatar image), name, designation, and area of specialization. Include at least 6 sample faculty entries.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Faculty.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Faculty.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-5",
-        "summary": "Implement a Laboratories & Infrastructure section with four cards for: AI Lab, Data Analytics Lab, Computing Facilities, and Smart Classroom. Each card includes an icon, a name, and a short descriptive paragraph about the facility.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Labs.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Labs.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-6",
-        "summary": "Implement a Student Achievements section with three subsections: Hackathon Wins (list of notable wins with event name and year), Research Publications (list of published papers with title and venue), and Internship Highlights (key companies and roles). Use stat counters or cards as appropriate.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Achievements.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Achievements.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-7",
-        "summary": "Implement an Events & Workshops section with two parts: an Upcoming Events list (event name, date, brief description) and a Past Events gallery (event thumbnail images arranged in a grid with captions). Use generated images for event thumbnails.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Events.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Events.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-8",
-        "summary": "Implement a Placement & Industry Collaboration section showing: placement statistics (placement rate %, average package, highest package) as animated stat cards; a row of partner company logo placeholders; and an internship opportunities subsection with a brief description and a call-to-action.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Placements.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Placements.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-9",
-        "summary": "Implement a Research & Projects section with two subsections: Ongoing Projects (project title, description, team lead) displayed as cards, and a Student Project Showcase (project name, brief description, tech stack tags) displayed as a gallery or grid. Include at least 3 sample entries each.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Research.tsx",
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Research.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/Navigation.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
-    "backend/blob-storage/Mixin.mo",
-    "backend/blob-storage/Storage.mo",
     "backend/main.mo",
+    "backend/migration.mo",
     "build-request.json",
-    "build-template/Dockerfile",
-    "build-template/LICENSE",
     "build-template/README.md",
-    "build-template/deploy.sh",
-    "build-template/icp.yaml",
-    "build-template/package.json",
-    "build-template/pnpm-lock.yaml",
-    "build-template/pnpm-workspace.yaml",
-    "build-template/scripts/prune-unused-images.js",
-    "build-template/scripts/resize-images.js",
-    "build-template/src/backend/canister.yaml",
-    "build-template/src/backend/system-idl/aaaaa-aa.did",
-    "build-template/src/frontend/canister.yaml",
-    "build-template/src/frontend/components.json",
-    "build-template/src/frontend/env.json",
-    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
-    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
-    "build-template/src/frontend/eslint.config.js",
-    "build-template/src/frontend/package.json",
-    "build-template/src/frontend/postcss.config.js",
-    "build-template/src/frontend/src/components/ui/accordion.tsx",
-    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
-    "build-template/src/frontend/src/components/ui/alert.tsx",
-    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
-    "build-template/src/frontend/src/components/ui/avatar.tsx",
-    "build-template/src/frontend/src/components/ui/badge.tsx",
-    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
-    "build-template/src/frontend/src/components/ui/button.tsx",
-    "build-template/src/frontend/src/components/ui/calendar.tsx",
-    "build-template/src/frontend/src/components/ui/card.tsx",
-    "build-template/src/frontend/src/components/ui/carousel.tsx",
-    "build-template/src/frontend/src/components/ui/chart.tsx",
-    "build-template/src/frontend/src/components/ui/checkbox.tsx",
-    "build-template/src/frontend/src/components/ui/collapsible.tsx",
-    "build-template/src/frontend/src/components/ui/command.tsx",
-    "build-template/src/frontend/src/components/ui/context-menu.tsx",
-    "build-template/src/frontend/src/components/ui/dialog.tsx",
-    "build-template/src/frontend/src/components/ui/drawer.tsx",
-    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
-    "build-template/src/frontend/src/components/ui/form.tsx",
-    "build-template/src/frontend/src/components/ui/hover-card.tsx",
-    "build-template/src/frontend/src/components/ui/input-otp.tsx",
-    "build-template/src/frontend/src/components/ui/input.tsx",
-    "build-template/src/frontend/src/components/ui/label.tsx",
-    "build-template/src/frontend/src/components/ui/menubar.tsx",
-    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
-    "build-template/src/frontend/src/components/ui/pagination.tsx",
-    "build-template/src/frontend/src/components/ui/popover.tsx",
-    "build-template/src/frontend/src/components/ui/progress.tsx",
-    "build-template/src/frontend/src/components/ui/radio-group.tsx",
-    "build-template/src/frontend/src/components/ui/resizable.tsx",
-    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
-    "build-template/src/frontend/src/components/ui/select.tsx",
-    "build-template/src/frontend/src/components/ui/separator.tsx",
-    "build-template/src/frontend/src/components/ui/sheet.tsx",
-    "build-template/src/frontend/src/components/ui/sidebar.tsx",
-    "build-template/src/frontend/src/components/ui/skeleton.tsx",
-    "build-template/src/frontend/src/components/ui/slider.tsx",
-    "build-template/src/frontend/src/components/ui/sonner.tsx",
-    "build-template/src/frontend/src/components/ui/switch.tsx",
-    "build-template/src/frontend/src/components/ui/table.tsx",
-    "build-template/src/frontend/src/components/ui/tabs.tsx",
-    "build-template/src/frontend/src/components/ui/textarea.tsx",
-    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
-    "build-template/src/frontend/src/components/ui/toggle.tsx",
-    "build-template/src/frontend/src/components/ui/tooltip.tsx",
-    "build-template/src/frontend/src/hooks/use-mobile.tsx",
-    "build-template/src/frontend/src/lib/utils.ts",
-    "build-template/src/frontend/tsconfig.json",
-    "build-template/src/frontend/vite.config.js",
-    "build-template/tsconfig.json",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/index.css",
     "frontend/index.html",
-    "frontend/public/assets/generated/event-thumb-1.dim_800x500.png",
-    "frontend/public/assets/generated/event-thumb-2.dim_800x500.png",
-    "frontend/public/assets/generated/event-thumb-3.dim_800x500.png",
-    "frontend/public/assets/generated/event-thumb-4.dim_800x500.png",
-    "frontend/public/assets/generated/faculty-avatar.dim_400x400.png",
-    "frontend/public/assets/generated/hero-ai-bg.dim_1920x1080.png",
+    "frontend/public/assets/generated/hero-neural-bg.dim_1920x1080.png",
+    "frontend/public/assets/generated/profile-avatar.dim_400x400.png",
     "frontend/src/App.tsx",
     "frontend/src/backend.d.ts",
     "frontend/src/backend.ts",
     "frontend/src/components/About.tsx",
     "frontend/src/components/Achievements.tsx",
     "frontend/src/components/Contact.tsx",
+    "frontend/src/components/Education.tsx",
     "frontend/src/components/Events.tsx",
     "frontend/src/components/Faculty.tsx",
     "frontend/src/components/Footer.tsx",
@@ -327,18 +168,14 @@
     "frontend/src/components/Navigation.tsx",
     "frontend/src/components/Placements.tsx",
     "frontend/src/components/Programs.tsx",
+    "frontend/src/components/Projects.tsx",
     "frontend/src/components/Research.tsx",
-    "frontend/src/components/ScrollAnimation.tsx",
-    "frontend/src/config.ts",
+    "frontend/src/components/Resume.tsx",
+    "frontend/src/components/Skills.tsx",
     "frontend/src/declarations/backend.did.d.ts",
     "frontend/src/declarations/backend.did.js",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
     "frontend/src/hooks/useQueries.ts",
     "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/src/ui-summary.json",
-    "frontend/src/utils/StorageClient.ts",
     "frontend/tailwind.config.js",
     "project_state.json",
     "scratch/component-selection.json",

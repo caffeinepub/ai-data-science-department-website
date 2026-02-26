@@ -1,5 +1,127 @@
-import { ArrowRight, Mail } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { ArrowRight, Mail, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
+interface Node {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  connections: number[];
+}
+
+function NeuralCanvas() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationId: number;
+    const nodes: Node[] = [];
+    const NODE_COUNT = 60;
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    };
+
+    const initNodes = () => {
+      nodes.length = 0;
+      for (let i = 0; i < NODE_COUNT; i++) {
+        nodes.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          radius: Math.random() * 2 + 1,
+          connections: [],
+        });
+      }
+    };
+
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update positions
+      for (const node of nodes) {
+        node.x += node.vx;
+        node.y += node.vy;
+        if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+        if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+      }
+
+      // Draw connections
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const maxDist = 140;
+
+          if (dist < maxDist) {
+            const alpha = (1 - dist / maxDist) * 0.35;
+            const gradient = ctx.createLinearGradient(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y);
+            gradient.addColorStop(0, `rgba(100, 140, 255, ${alpha})`);
+            gradient.addColorStop(1, `rgba(160, 100, 255, ${alpha})`);
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw nodes
+      for (const node of nodes) {
+        const gradient = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.radius * 3);
+        gradient.addColorStop(0, 'rgba(120, 160, 255, 0.9)');
+        gradient.addColorStop(0.5, 'rgba(140, 100, 255, 0.5)');
+        gradient.addColorStop(1, 'rgba(100, 140, 255, 0)');
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.radius * 3, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(160, 180, 255, 0.9)';
+        ctx.fill();
+      }
+
+      animationId = requestAnimationFrame(draw);
+    };
+
+    resize();
+    initNodes();
+    draw();
+
+    const resizeObserver = new ResizeObserver(() => {
+      resize();
+      initNodes();
+    });
+    resizeObserver.observe(canvas);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      resizeObserver.disconnect();
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full"
+      style={{ opacity: 0.6 }}
+    />
+  );
+}
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -8,111 +130,107 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden section-dark">
+      {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/generated/hero-ai-bg.dim_1920x1080.png"
-          alt="AI neural network abstract background"
-          className="w-full h-full object-cover"
+          src="/assets/generated/hero-neural-bg.dim_1920x1080.png"
+          alt="Neural network background"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 gradient-hero opacity-85" />
-        {/* Animated overlay particles */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full bg-white/5 animate-float"
-              style={{
-                width: `${80 + i * 40}px`,
-                height: `${80 + i * 40}px`,
-                left: `${10 + i * 15}%`,
-                top: `${20 + (i % 3) * 25}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${3 + i * 0.5}s`,
-              }}
-            />
-          ))}
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-ai-dark/60 via-ai-dark/40 to-ai-dark" />
+      </div>
+
+      {/* Animated neural network canvas */}
+      <div className="absolute inset-0 z-0">
+        <NeuralCanvas />
+      </div>
+
+      {/* Ambient glow orbs */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute rounded-full animate-pulse-slow"
+          style={{
+            width: '600px',
+            height: '600px',
+            left: '-150px',
+            top: '-100px',
+            background: 'radial-gradient(circle, oklch(0.65 0.22 265 / 0.12) 0%, transparent 70%)',
+          }}
+        />
+        <div
+          className="absolute rounded-full animate-pulse-slow"
+          style={{
+            width: '500px',
+            height: '500px',
+            right: '-100px',
+            bottom: '100px',
+            background: 'radial-gradient(circle, oklch(0.55 0.25 290 / 0.1) 0%, transparent 70%)',
+            animationDelay: '1.5s',
+          }}
+        />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
         {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 text-white/90 text-sm font-medium mb-6"
-          style={{ animation: 'slideUp 0.6s ease-out 0.1s both' }}
-        >
-          <span className="w-2 h-2 rounded-full bg-brand-blue-light animate-pulse-slow" />
-          Priyadarshini Engineering College
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-ai-blue/30 mb-8 animate-float">
+          <span className="w-2 h-2 rounded-full bg-ai-blue animate-pulse" />
+          <span className="text-xs font-medium text-ai-blue tracking-widest uppercase">
+            AI & Data Science Portfolio
+          </span>
         </div>
 
-        {/* Department Name */}
-        <h1
-          className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-4"
-          style={{ animation: 'slideUp 0.6s ease-out 0.2s both', fontFamily: "'Playfair Display', Georgia, serif" }}
-        >
-          Department of
-          <span className="block text-gradient mt-1">Artificial Intelligence</span>
-          <span className="block text-white/90 text-3xl sm:text-4xl lg:text-5xl mt-1">& Data Science</span>
+        {/* Name */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4 leading-tight tracking-tight">
+          Afnan{' '}
+          <span className="text-gradient-ai">Tahib</span>
         </h1>
 
+        {/* Subtitle */}
+        <p className="text-lg sm:text-xl md:text-2xl font-medium text-white/80 mb-6 tracking-wide">
+          AI & Data Science Undergraduate
+        </p>
+
         {/* Tagline */}
-        <p
-          className="text-lg sm:text-xl lg:text-2xl text-white/80 font-light mt-6 mb-10 max-w-2xl mx-auto"
-          style={{ animation: 'slideUp 0.6s ease-out 0.35s both' }}
-        >
-          Innovating the Future with AI & Data Science
+        <p className="text-sm sm:text-base text-ai-blue font-mono mb-8 tracking-widest uppercase">
+          "Building Intelligent Systems for the Future"
+        </p>
+
+        {/* Intro */}
+        <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed">
+          Passionate about Machine Learning, Data Analytics, and building intelligent solutions
+          that solve real-world problems.
         </p>
 
         {/* CTA Buttons */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          style={{ animation: 'slideUp 0.6s ease-out 0.5s both' }}
-        >
-          <Button
-            size="lg"
-            onClick={() => scrollTo('programs')}
-            className="bg-white text-brand-blue-mid hover:bg-brand-blue-pale hover:text-brand-navy font-semibold px-8 py-3 rounded-full shadow-blue transition-all duration-300 hover:scale-105 group"
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button
+            onClick={() => scrollTo('projects')}
+            className="group flex items-center gap-2 px-8 py-3.5 rounded-xl gradient-ai text-white font-semibold text-sm shadow-ai-glow hover:shadow-ai-glow-lg hover:-translate-y-0.5 transition-all duration-300"
           >
-            Explore Programs
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
+            View Projects
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
+          <button
             onClick={() => scrollTo('contact')}
-            className="border-white/60 text-white hover:bg-white/15 hover:border-white font-semibold px-8 py-3 rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 group"
+            className="group flex items-center gap-2 px-8 py-3.5 rounded-xl glass border border-ai-blue/40 text-white font-semibold text-sm hover:border-ai-blue/70 hover:bg-ai-blue/10 hover:-translate-y-0.5 transition-all duration-300"
           >
-            <Mail className="mr-2 w-4 h-4" />
-            Contact Us
-          </Button>
-        </div>
-
-        {/* Stats row */}
-        <div
-          className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto"
-          style={{ animation: 'slideUp 0.6s ease-out 0.65s both' }}
-        >
-          {[
-            { value: '2020', label: 'Established' },
-            { value: '60+', label: 'Students/Year' },
-            { value: 'NBA', label: 'Accredited' },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</div>
-              <div className="text-xs sm:text-sm text-white/65 mt-0.5">{stat.label}</div>
-            </div>
-          ))}
+            <Mail className="w-4 h-4" />
+            Contact Me
+          </button>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-white/40 flex items-start justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-white/60" />
-        </div>
-      </div>
+      <button
+        onClick={() => scrollTo('about')}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/40 hover:text-white/70 transition-colors"
+        aria-label="Scroll down"
+      >
+        <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
+        <ChevronDown className="w-5 h-5 animate-bounce" />
+      </button>
     </section>
   );
 }

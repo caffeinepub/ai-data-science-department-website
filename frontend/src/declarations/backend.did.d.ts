@@ -11,13 +11,11 @@ import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
 export interface ContactInfo {
+  'linkedin' : string,
   'email' : string,
-  'googleMapsUrl' : string,
-  'address' : string,
-  'phone' : string,
+  'github' : string,
 }
 export interface ContactMessage {
-  'subject' : string,
   'name' : string,
   'email' : string,
   'message' : string,
@@ -51,10 +49,7 @@ export interface _SERVICE {
   '_caffeineStorageUpdateGatewayPrincipals' : ActorMethod<[], undefined>,
   'getContactInfo' : ActorMethod<[], ContactInfo>,
   'getContactMessages' : ActorMethod<[], Array<ContactMessage>>,
-  'submitContactMessage' : ActorMethod<
-    [string, string, string, string],
-    string
-  >,
+  'submitContactMessage' : ActorMethod<[string, string, string], string>,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];

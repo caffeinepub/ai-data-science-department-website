@@ -1,372 +1,232 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Department of AI & Data Science – Priyadarshini Engineering College Website",
+  "title": "Afnan Tahib Personal Portfolio Frontend",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Implement Hero section with department name, tagline, AI-themed animated background, and CTA buttons",
+      "id": "REQ-16",
+      "summary": "Replace department-focused frontend with personal portfolio using dark theme, blue/purple AI gradients, glassmorphism UI, hover effects, and smooth scroll animations",
       "acceptanceCriteria": [
-        "Department name and tagline are prominently displayed in the hero.",
-        "AI-themed abstract graphic (generated image) is rendered as background.",
-        "Both CTA buttons scroll smoothly to their target sections.",
-        "Section is fully responsive on mobile, tablet, and desktop."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Hero.tsx",
-          "operation": "create",
-          "description": "Create Hero component with department name 'Department of Artificial Intelligence and Data Science – Priyadarshini Engineering College', tagline 'Innovating the Future with AI & Data Science', two CTA buttons ('Explore Programs' scrolling to #programs, 'Contact Us' scrolling to #contact), and the generated hero background image from frontend/public/assets/generated/hero-ai-bg.dim_1920x1080.png as a full-width animated background. Implement smooth scroll behavior using scrollIntoView. Apply responsive design with mobile-first approach."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Hero component at the top of the main page layout, above all other sections."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Implement About the Department section with Vision, Mission, introduction, and key highlights",
-      "acceptanceCriteria": [
-        "Vision and Mission are displayed as distinct labeled subsections.",
-        "At least one paragraph of introductory text about AI & DS is shown.",
-        "Three highlight cards are visible with icons and labels for Established Year, Intake Capacity, and Accreditation.",
-        "Layout adjusts gracefully on all screen sizes."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/About.tsx",
-          "operation": "create",
-          "description": "Create About component containing a Vision subsection, a Mission subsection, an introductory paragraph about the AI & Data Science field, and three highlight cards displaying Established Year (e.g., 2020), Intake Capacity (e.g., 60 students), and Accreditation status (e.g., NBA Accredited). Use icons from lucide-react for each highlight card. Apply responsive grid layout that stacks on mobile."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the About component with id='about' for navigation targeting, positioned after the Hero section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Implement Programs Offered section with B.Tech card and M.Tech placeholder",
-      "acceptanceCriteria": [
-        "B.Tech card includes program name, duration, and a list of curriculum highlights.",
-        "M.Tech card is visually distinct and marked as 'Coming Soon'.",
-        "Section is responsive and cards stack on mobile."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Programs.tsx",
-          "operation": "create",
-          "description": "Create Programs component with two program cards: (1) B.Tech in AI & Data Science card showing program name, duration (4 years), and curriculum highlights including core subjects (Machine Learning, Deep Learning, Data Analytics, Big Data) and electives (NLP, Computer Vision, Reinforcement Learning); (2) M.Tech placeholder card marked 'Coming Soon' with a distinct visual style (e.g., semi-transparent overlay). Use responsive card grid that stacks on mobile."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Programs component with id='programs' for navigation and smooth scroll targeting, positioned after the About section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Implement Faculty section with responsive grid of faculty member cards",
-      "acceptanceCriteria": [
-        "At least 6 faculty cards are rendered in a responsive grid.",
-        "Each card shows a photo/avatar, name, designation, and specialization.",
-        "Cards have a subtle hover effect (lift or shadow).",
-        "Grid collapses to a single column on mobile."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Faculty.tsx",
-          "operation": "create",
-          "description": "Create Faculty component displaying at least 6 faculty member cards in a responsive grid (3 columns on desktop, 2 on tablet, 1 on mobile). Each card shows the generated faculty avatar from frontend/public/assets/generated/faculty-avatar.dim_400x400.png, faculty name, designation (e.g., Professor, Associate Professor, Assistant Professor), and area of specialization (e.g., Machine Learning, Data Mining, AI Ethics). Add hover effects (subtle lift and shadow transition) to all cards."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Faculty component with id='faculty' for navigation targeting, positioned after the Programs section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Implement Laboratories & Infrastructure section with four facility cards",
-      "acceptanceCriteria": [
-        "All four lab/facility cards are present.",
-        "Each card has a distinct icon, heading, and description text.",
-        "Section is responsive across all breakpoints."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Labs.tsx",
-          "operation": "create",
-          "description": "Create Labs component with four facility cards: AI Lab (icon and description of AI research and development facilities), Data Analytics Lab (description of data analysis tools and software), Computing Facilities (description of high-performance computing resources), and Smart Classroom (description of modern teaching technology). Use icons from lucide-react for each card. Apply responsive grid layout (2x2 on desktop, 2x1 on tablet, 1 column on mobile)."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Labs component with id='labs' for navigation targeting, positioned after the Faculty section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Implement Student Achievements section with hackathon wins, publications, and internships",
-      "acceptanceCriteria": [
-        "Three clearly labeled subsections are present.",
-        "Each subsection contains at least 3 sample entries.",
-        "Animated count-up numbers or highlight cards are used for impact metrics.",
-        "Section is fully responsive."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Achievements.tsx",
-          "operation": "create",
-          "description": "Create Achievements component with three subsections: (1) Hackathon Wins listing at least 3 notable wins with event name and year; (2) Research Publications listing at least 3 published papers with title and venue; (3) Internship Highlights showing key companies (e.g., Google, Microsoft, Amazon) and roles. Use animated stat counters for aggregate metrics (total wins, publications count) using intersection observer to trigger count-up animations. Apply responsive layout that stacks subsections on mobile."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Achievements component with id='achievements' for navigation targeting, positioned after the Labs section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Implement Events & Workshops section with upcoming events list and past events gallery",
-      "acceptanceCriteria": [
-        "Upcoming events list shows at least 3 sample upcoming events.",
-        "Past events gallery shows at least 4 thumbnail cards with captions.",
-        "Gallery is responsive and wraps correctly on smaller screens.",
-        "Generated event thumbnail images are loaded from frontend/public/assets/generated."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Events.tsx",
-          "operation": "create",
-          "description": "Create Events component with two parts: (1) Upcoming Events list showing at least 3 events with event name, date, and brief description; (2) Past Events gallery displaying 4 thumbnail cards using the generated images from frontend/public/assets/generated/event-thumb-1.dim_800x500.png, event-thumb-2.dim_800x500.png, event-thumb-3.dim_800x500.png, and event-thumb-4.dim_800x500.png, each with captions describing the event. Apply responsive grid for the gallery (2x2 on desktop, 2x1 on tablet, 1 column on mobile) with hover effects on thumbnails."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Events component with id='events' for navigation targeting, positioned after the Achievements section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Implement Placement & Industry Collaboration section with stats, logos, and internship opportunities",
-      "acceptanceCriteria": [
-        "At least 3 placement stat cards are shown with animated numbers.",
-        "At least 6 partner company logo placeholders are displayed in a horizontal scroll or grid.",
-        "An internship opportunities subsection with descriptive text and a CTA button is present.",
-        "Section is fully responsive."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Placements.tsx",
-          "operation": "create",
-          "description": "Create Placements component with: (1) three animated stat cards showing placement rate (e.g., 92%), average package (e.g., 6.5 LPA), and highest package (e.g., 18 LPA) using intersection observer to trigger count-up animations; (2) a row of at least 6 partner company logo placeholders arranged in a horizontal scrollable container or responsive grid; (3) an Internship Opportunities subsection with descriptive text and a CTA button. Apply responsive design with stat cards stacking on mobile."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Placements component with id='placements' for navigation targeting, positioned after the Events section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-9",
-      "summary": "Implement Research & Projects section with ongoing projects and student showcase",
-      "acceptanceCriteria": [
-        "Ongoing Projects subsection has at least 3 project cards.",
-        "Student Project Showcase has at least 3 entries with tech stack tags.",
-        "Cards have hover effects and consistent styling.",
-        "Fully responsive layout."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Research.tsx",
-          "operation": "create",
-          "description": "Create Research component with two subsections: (1) Ongoing Projects displaying at least 3 project cards, each showing project title, description, and team lead name; (2) Student Project Showcase displaying at least 3 entries with project name, brief description, and tech stack tags (e.g., Python, TensorFlow, React). Apply responsive grid layout (2 or 3 columns on desktop, 1 on mobile) with hover effects (lift or shadow) on all project cards."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Research component with id='research' for navigation targeting, positioned after the Placements section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "summary": "Implement Contact section with address, map, and contact form with backend integration",
-      "acceptanceCriteria": [
-        "Contact details (address, email, phone) are clearly displayed.",
-        "A map embed or static map placeholder for Priyadarshini Engineering College is shown.",
-        "Contact form fields: Name, Email, Subject, Message are all present with basic validation.",
-        "On submission, form data is saved to the backend canister and a success confirmation is shown to the user.",
-        "Section is fully responsive."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Contact.tsx",
-          "operation": "create",
-          "description": "Create Contact component displaying department address, email, phone number, and an embedded Google Maps iframe pointing to Priyadarshini Engineering College. Include a contact form with fields for Name, Email, Subject, and Message, all with basic HTML5 validation. On form submission, call the backend submitContactMessage method from frontend/src/backend.d.ts, handle loading state, and display success or error messages. Apply responsive layout with form stacking on mobile."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Contact component with id='contact' for navigation and smooth scroll targeting, positioned after the Research section."
-        }
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "summary": "Implement responsive sticky navigation bar with smooth scroll",
-      "acceptanceCriteria": [
-        "Navigation bar is sticky and remains visible on scroll.",
-        "All section links are present and trigger smooth scroll.",
-        "On mobile, a hamburger menu toggles a dropdown nav.",
-        "Active section is highlighted in the nav as user scrolls."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Navigation.tsx",
-          "operation": "create",
-          "description": "Create Navigation component with sticky positioning, department name/logo on the left, and navigation links to all sections (About, Programs, Faculty, Labs, Achievements, Events, Placements, Research, Contact) on the right. Implement smooth scroll behavior on link clicks using scrollIntoView. Add a hamburger menu for mobile that toggles a dropdown navigation. Use intersection observer to highlight the active section link as the user scrolls. Apply responsive design with hamburger menu appearing below tablet breakpoint."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Navigation component at the top of the application layout, before all other content sections."
-        }
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "summary": "Implement site footer with quick links, contact details, social media, and copyright",
-      "acceptanceCriteria": [
-        "Footer contains quick navigation links organized in columns.",
-        "Social media icons are present and styled consistently.",
-        "Copyright notice is displayed.",
-        "Footer is responsive and stacks gracefully on mobile."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "create",
-          "description": "Create Footer component with quick links to all major sections organized in columns, department contact details, social media icons for LinkedIn, Twitter, YouTube, and Instagram (using lucide-react icons), and a copyright notice for 'Department of AI & Data Science, Priyadarshini Engineering College'. Apply responsive design with columns stacking vertically on mobile."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the Footer component at the bottom of the application layout, after all content sections."
-        }
-      ]
-    },
-    {
-      "id": "REQ-13",
-      "summary": "Apply consistent blue/white/gradient theme, professional typography, scroll animations, and hover effects",
-      "acceptanceCriteria": [
-        "A consistent blue/white/gradient color palette is applied site-wide.",
-        "Heading and body fonts are professional and consistently applied.",
-        "Sections animate into view as the user scrolls (intersection observer).",
-        "All cards and buttons have visible hover transitions.",
-        "No visual inconsistencies between sections."
+        "Site renders on a dark background throughout all sections",
+        "Blue/purple gradient accents are visible on headings, buttons, and card borders",
+        "Glassmorphism effect (backdrop blur, semi-transparent surfaces) is applied to cards and nav",
+        "All interactive cards and buttons have hover transitions/micro-interactions",
+        "Layout is fully responsive on mobile (< 768px), tablet (768–1024px), and desktop (> 1024px)",
+        "Smooth scroll behavior is active for all anchor/CTA navigation"
       ],
       "file_operations": [
         {
           "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Define CSS custom properties for the blue, white, and gradient color palette. Set primary blue shades (e.g., #1e40af, #3b82f6, #60a5fa), white (#ffffff), and gradient definitions. Apply professional academic typography using a clean sans-serif font family (e.g., Inter, Roboto) for body text and a serif or elegant sans-serif for headings. Ensure all base styles are consistent across the application."
+          "description": "Replace existing color theme with dark background base colors, blue-to-purple gradient utilities, glassmorphism backdrop-blur classes, and smooth scroll behavior. Define CSS custom properties for dark mode (#0a0a1a base, blue/purple gradient stops), add utility classes for glass cards (backdrop-blur-md bg-white/5), and enable smooth scrolling on html root."
         },
         {
           "path": "frontend/tailwind.config.js",
           "operation": "modify",
-          "description": "Extend the Tailwind theme with custom colors matching the blue/white/gradient palette defined in index.css. Add custom font families for headings and body text. Configure animation utilities for fade-in and slide-up effects to be used with intersection observer."
-        },
-        {
-          "path": "frontend/src/components/ScrollAnimation.tsx",
-          "operation": "create",
-          "description": "Create a reusable ScrollAnimation wrapper component using intersection observer to trigger fade-in or slide-up animations when elements enter the viewport. Export this component for use in all section components."
-        },
-        {
-          "path": "frontend/src/components/Hero.tsx",
-          "operation": "modify",
-          "description": "Wrap Hero section content in the ScrollAnimation component to apply entrance animations. Add hover effects to CTA buttons using Tailwind transition utilities."
-        },
-        {
-          "path": "frontend/src/components/About.tsx",
-          "operation": "modify",
-          "description": "Wrap About section content in the ScrollAnimation component. Add hover effects to highlight cards using Tailwind transition utilities (scale or shadow)."
-        },
-        {
-          "path": "frontend/src/components/Programs.tsx",
-          "operation": "modify",
-          "description": "Wrap Programs section content in the ScrollAnimation component. Add hover effects to program cards."
-        },
-        {
-          "path": "frontend/src/components/Faculty.tsx",
-          "operation": "modify",
-          "description": "Wrap Faculty section content in the ScrollAnimation component. Ensure faculty cards have hover lift and shadow effects."
-        },
-        {
-          "path": "frontend/src/components/Labs.tsx",
-          "operation": "modify",
-          "description": "Wrap Labs section content in the ScrollAnimation component. Add hover effects to facility cards."
-        },
-        {
-          "path": "frontend/src/components/Achievements.tsx",
-          "operation": "modify",
-          "description": "Wrap Achievements section content in the ScrollAnimation component. Ensure stat counters animate on scroll entry."
-        },
-        {
-          "path": "frontend/src/components/Events.tsx",
-          "operation": "modify",
-          "description": "Wrap Events section content in the ScrollAnimation component. Add hover effects to past event thumbnails."
-        },
-        {
-          "path": "frontend/src/components/Placements.tsx",
-          "operation": "modify",
-          "description": "Wrap Placements section content in the ScrollAnimation component. Ensure stat cards animate on scroll entry and add hover effects to company logos."
-        },
-        {
-          "path": "frontend/src/components/Research.tsx",
-          "operation": "modify",
-          "description": "Wrap Research section content in the ScrollAnimation component. Ensure project cards have hover effects."
-        },
-        {
-          "path": "frontend/src/components/Contact.tsx",
-          "operation": "modify",
-          "description": "Wrap Contact section content in the ScrollAnimation component. Add hover effects to the submit button."
+          "description": "Update Tailwind theme to include dark mode colors, blue/purple gradient color stops, glassmorphism utilities, hover transition defaults, and modern sans-serif font pairings. Extend colors with darkBg (#0a0a1a), aiBlue (#3b82f6 to #8b5cf6 gradient stops), add backdrop-blur variants, and configure transition durations for micro-interactions."
         }
       ]
     },
     {
-      "id": "REQ-15",
-      "summary": "Render generated images as static assets from frontend/public/assets/generated",
+      "id": "REQ-17",
+      "summary": "Implement full-screen Hero section with Afnan Tahib name, AI subtitle, intro text, CTA buttons (View Projects, Contact Me), and animated neural network canvas background",
       "acceptanceCriteria": [
-        "All generated image assets are referenced from frontend/public/assets/generated.",
-        "Images load correctly in production and development builds.",
-        "Appropriate alt text is provided for all images."
+        "Hero section occupies the full viewport height",
+        "'Afnan Tahib' is displayed in a large, bold heading",
+        "Subtitle 'AI & Data Science Undergraduate' is shown below the name",
+        "Intro paragraph text is present",
+        "'View Projects' button scrolls smoothly to the Projects section",
+        "'Contact Me' button scrolls smoothly to the Contact section",
+        "Animated neural network or AI grid effect is rendered as the section background"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Ensure the hero background image is loaded from frontend/public/assets/generated/hero-ai-bg.dim_1920x1080.png with appropriate alt text 'AI neural network abstract background'."
+          "description": "Replace department hero content with personal portfolio hero: large heading 'Afnan Tahib', subtitle 'AI & Data Science Undergraduate', intro text 'Passionate about Machine Learning, Data Analytics, and building intelligent solutions that solve real-world problems.', two CTA buttons ('View Projects' smooth-scrolling to #projects, 'Contact Me' to #contact). Replace the AI background image reference with the generated hero-neural-bg.dim_1920x1080.png from frontend/public/assets/generated/hero-neural-bg.dim_1920x1080.png. Add a live animated neural network canvas overlay using HTML5 canvas with particles, nodes, and connecting lines animated via requestAnimationFrame. Apply glassmorphism to CTA buttons with hover lift effects."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Implement About Me section with personal details (education, career goal, interests, strengths) in a clean card/two-column layout with scroll animations",
+      "acceptanceCriteria": [
+        "Section heading 'About Me' is visible",
+        "College name and degree are displayed",
+        "Career goal statement is shown",
+        "Interests and strengths are listed",
+        "Section content animates in on scroll"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "modify",
+          "description": "Replace department introduction with personal About Me content: education details (B.Tech in Artificial Intelligence & Data Science, Priyadarshini Engineering College, Vaniyambadi), career goal ('Aspiring AI Engineer and Research Enthusiast'), interests (ML, Data Science, intelligent systems), and strengths (logical thinking, problem-solving, fast learner). Use a two-column or single-card layout with the profile avatar image frontend/public/assets/generated/profile-avatar.dim_400x400.png displayed prominently. Apply glassmorphism card styling, wrap content in ScrollAnimation for fade-up effect. Remove Vision/Mission cards and department highlight stats."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Implement Skills section with animated skill cards/progress bars grouped into Programming, AI/ML, and Tools & Libraries categories",
+      "acceptanceCriteria": [
+        "Three skill categories are displayed with clear headings",
+        "All listed skills appear under their respective category",
+        "Each skill has an animated progress bar or styled badge card",
+        "Animations trigger on scroll into view",
+        "Section is responsive and stacks gracefully on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Skills.tsx",
+          "operation": "create",
+          "description": "Create a new Skills section component displaying three categories with headings: Programming (Python, C++, SQL), AI/ML (Machine Learning, Deep Learning, Data Analytics, NLP (Basic), Computer Vision (Basic)), and Tools & Libraries (Pandas, NumPy, Scikit-learn, TensorFlow (Basic), Tableau, Power BI, Matplotlib). Render each skill as either an animated progress bar (using CSS width transitions on scroll) or a glassmorphism badge card. Wrap each category in ScrollAnimation with staggered delays for sequential reveal. Use grid or flex layout that stacks on mobile. Apply gradient accents to category headings and hover effects on skill cards."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Implement Projects section with two project cards (FUTURE_DS_01 and Sales Dashboard) featuring glassmorphism styling, tech tags, and external link buttons",
+      "acceptanceCriteria": [
+        "Both project cards are rendered with title, description, tech stack tags, and action button",
+        "GitHub button for FUTURE_DS_01 opens https://github.com/Afnan-Tahib/FUTURE_DS_01 in a new tab",
+        "Live Demo button for Sales Dashboard opens the Tableau URL in a new tab",
+        "Cards use glassmorphism styling",
+        "Hover effect lifts or highlights the card"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Projects.tsx",
+          "operation": "modify",
+          "description": "Replace academic programs content with personal Projects section containing exactly two project cards: (1) 'FUTURE_DS_01' with description 'Data Science and Analytics project showcasing practical implementation of data processing and analysis techniques.', tech tags [Python, Data Science, Analytics], and GitHub button linking to https://github.com/Afnan-Tahib/FUTURE_DS_01; (2) 'Sales Performance Dashboard – Superstore Analysis' with description 'Interactive Tableau dashboard analyzing sales and profit performance with data visualization insights.', tech tags [Tableau, Data Visualization, Analytics], and Live Demo button linking to https://public.tableau.com/app/profile/afnan.tahib/viz/SalesPerformanceDashboardSuperstoreAnalysis_17717554808110/SalesProfitPerformanceDashboard?publish=yes. Apply glassmorphism card styling with backdrop-blur, semi-transparent backgrounds, gradient borders, and hover lift/scale transforms. Wrap cards in ScrollAnimation with fade-up effect."
+        }
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "summary": "Implement Achievements & Certifications section with three subsections (Certifications, Workshops, Hackathons & Research) using badge cards and scroll animations",
+      "acceptanceCriteria": [
+        "Section has a clear 'Achievements & Certifications' heading",
+        "Certification cards are styled as badges with placeholder data",
+        "Workshops subsection is present with placeholder entries",
+        "Hackathons & Research subsection is visible with a 'Coming Soon' or placeholder state",
+        "All subsections animate in on scroll"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Achievements.tsx",
+          "operation": "modify",
+          "description": "Replace department achievements (hackathon wins, publications, internships) with personal Achievements & Certifications section containing three subsections: (1) Online Certifications displayed as badge-style glassmorphism cards with placeholder entries (e.g., 'Machine Learning Course', 'Data Analytics Certification'), (2) Workshops Attended as a list or card grid with placeholder workshop names and dates, (3) Hackathons & Research as a subsection with 'Coming Soon' or placeholder text indicating future entries. Remove count-up stat cards. Apply gradient accents to subsection headings, wrap each subsection in ScrollAnimation with staggered delays, and use badge/pill styling for certification names."
+        }
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "summary": "Implement Education section displaying B.Tech degree, institution, and undergraduate status using a timeline or card layout with scroll animation",
+      "acceptanceCriteria": [
+        "Education section heading is visible",
+        "Degree name, institution, and 'Undergraduate Student' status are all displayed",
+        "Layout uses a timeline or styled card",
+        "Section animates in on scroll"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Education.tsx",
+          "operation": "create",
+          "description": "Create an Education section component displaying a single education entry: Degree 'B.Tech in Artificial Intelligence & Data Science', Institution 'Priyadarshini Engineering College, Vaniyambadi', and Status 'Undergraduate Student (currently pursuing)'. Use a vertical timeline layout or a single glassmorphism card with the institution name prominently displayed, degree as a subheading, and status badge. Wrap in ScrollAnimation with fade-up effect. Apply gradient accent to the timeline connector or card border."
+        }
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "summary": "Implement Resume section with a prominent 'Download Resume' button linking to a placeholder PDF",
+      "acceptanceCriteria": [
+        "Section heading 'Resume' or 'Curriculum Vitae' is displayed",
+        "Download Resume button is present and visually prominent",
+        "Button href points to /assets/resume.pdf",
+        "Button opens in a new tab"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Resume.tsx",
+          "operation": "create",
+          "description": "Create a Resume section component with a centered 'Curriculum Vitae' or 'My Resume' heading and a prominent 'Download Resume' button styled with glassmorphism, gradient border, and hover lift effect. The button is an anchor tag with href='/assets/resume.pdf' and target='_blank' rel='noopener noreferrer'. Include a download icon next to the button text. Wrap the section in ScrollAnimation with fade effect."
+        }
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "summary": "Implement Contact section with contact details (email, GitHub, LinkedIn icons), a contact form (Name, Email, Message), glassmorphism styling, and backend submission",
+      "acceptanceCriteria": [
+        "Email, GitHub, and LinkedIn are displayed as clickable links/icons",
+        "GitHub link opens https://github.com/Afnan-Tahib/FUTURE_DS_01 in a new tab",
+        "LinkedIn link opens https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384 in a new tab",
+        "Contact form has Name, Email, and Message fields with a Submit button",
+        "Form submission sends data to the backend and stores it",
+        "Success feedback is shown to the user after submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Replace department contact info with personal contact details: email afnantahibkondalam@gmail.com (clickable mailto link), GitHub icon linking to https://github.com/Afnan-Tahib/FUTURE_DS_01 (target='_blank'), and LinkedIn icon linking to https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384 (target='_blank'). Remove the 'subject' field from the contact form, keeping only Name, Email, and Message fields with a Submit button. Update the useSubmitContactMessage mutation call to pass only name, email, and message (three arguments). Apply glassmorphism styling to the form card and contact info card with gradient accents. Show success toast feedback using Sonner after submission. Wrap section in ScrollAnimation."
         },
         {
-          "path": "frontend/src/components/Faculty.tsx",
+          "path": "frontend/src/hooks/useQueries.ts",
           "operation": "modify",
-          "description": "Ensure all faculty avatar images are loaded from frontend/public/assets/generated/faculty-avatar.dim_400x400.png with appropriate alt text 'Faculty member avatar'."
-        },
+          "description": "Update the useSubmitContactMessage mutation to call backend.submitContactMessage with three arguments (name, email, message) instead of four, removing the subject parameter. Ensure the mutation returns a success message and invalidates the contact messages query on success."
+        }
+      ]
+    },
+    {
+      "id": "REQ-26",
+      "summary": "Implement site footer with quick navigation links, social media icons (GitHub, LinkedIn), and copyright line",
+      "acceptanceCriteria": [
+        "Footer contains quick navigation links to all major portfolio sections",
+        "GitHub and LinkedIn icons are clickable and link to the correct URLs",
+        "Copyright notice is displayed",
+        "Footer is responsive and visually consistent with the dark theme"
+      ],
+      "file_operations": [
         {
-          "path": "frontend/src/components/Events.tsx",
+          "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Ensure past event thumbnails are loaded from frontend/public/assets/generated/event-thumb-1.dim_800x500.png, event-thumb-2.dim_800x500.png, event-thumb-3.dim_800x500.png, and event-thumb-4.dim_800x500.png with descriptive alt text for each event (e.g., 'Students at tech workshop', 'Hackathon competition', 'Guest lecture seminar', 'AI robotics demonstration')."
+          "description": "Replace department footer with personal portfolio footer: update branding to 'Afnan Tahib', update quick navigation links to About, Skills, Projects, Achievements, Education, Resume, and Contact (all smooth-scrolling to section IDs), update social media icons to GitHub (https://github.com/Afnan-Tahib/FUTURE_DS_01) and LinkedIn (https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384) both opening in new tabs, and update copyright line to '© 2024 Afnan Tahib. All rights reserved.' Remove department address/phone info. Apply dark background with glassmorphism accents and gradient border top. Ensure responsive layout with stacked columns on mobile."
+        }
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "summary": "Implement responsive sticky navigation bar with 'Afnan Tahib' branding, section links, smooth scroll, mobile hamburger menu, and glassmorphism on scroll",
+      "acceptanceCriteria": [
+        "Navigation bar is sticky and visible at the top on all screen sizes",
+        "Brand name 'Afnan Tahib' is shown on the left",
+        "All section links are present and functional",
+        "Clicking a nav link smoothly scrolls to the corresponding section",
+        "Hamburger menu appears on mobile and toggles nav links",
+        "Nav bar gets a glassy/frosted background on scroll"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Update navigation bar: replace department branding with 'Afnan Tahib' on the left, update nav links to About, Skills, Projects, Achievements, Education, Resume, and Contact (matching section IDs for smooth scroll and active highlighting), ensure hamburger menu toggles nav on mobile, and add scroll-aware glassmorphism background (backdrop-blur-md bg-white/5) when user scrolls past 50px. Keep existing smooth-scroll behavior and active section highlighting logic. Apply gradient accent to active nav link."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Wire all new portfolio sections into App.tsx and update section IDs for navigation",
+      "acceptanceCriteria": [
+        "All portfolio sections render in the correct order in App.tsx",
+        "Section IDs match navigation link targets",
+        "No orphan components remain unreferenced",
+        "Smooth scroll behavior works for all nav/CTA interactions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Replace department sections (Programs, Faculty, Labs, Placements, Research, Events) with personal portfolio sections in this order: Hero, About, Skills, Projects, Achievements, Education, Resume, Contact. Import new components (Skills, Education, Resume). Ensure each section has an id attribute matching nav targets (about, skills, projects, achievements, education, resume, contact). Keep Navigation at the top and Footer at the bottom. Remove imports for deleted department components."
         }
       ]
     }

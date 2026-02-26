@@ -90,7 +90,6 @@ export class ExternalBlob {
     }
 }
 export interface ContactMessage {
-    subject: string;
     name: string;
     email: string;
     message: string;
@@ -100,10 +99,9 @@ export interface _CaffeineStorageCreateCertificateResult {
     blob_hash: string;
 }
 export interface ContactInfo {
+    linkedin: string;
     email: string;
-    googleMapsUrl: string;
-    address: string;
-    phone: string;
+    github: string;
 }
 export interface _CaffeineStorageRefillResult {
     success?: boolean;
@@ -121,7 +119,7 @@ export interface backendInterface {
     _caffeineStorageUpdateGatewayPrincipals(): Promise<void>;
     getContactInfo(): Promise<ContactInfo>;
     getContactMessages(): Promise<Array<ContactMessage>>;
-    submitContactMessage(name: string, email: string, subject: string, message: string): Promise<string>;
+    submitContactMessage(name: string, email: string, message: string): Promise<string>;
 }
 import type { _CaffeineStorageRefillInformation as __CaffeineStorageRefillInformation, _CaffeineStorageRefillResult as __CaffeineStorageRefillResult } from "./declarations/backend.did.d.ts";
 export class Backend implements backendInterface {
@@ -238,17 +236,17 @@ export class Backend implements backendInterface {
             return result;
         }
     }
-    async submitContactMessage(arg0: string, arg1: string, arg2: string, arg3: string): Promise<string> {
+    async submitContactMessage(arg0: string, arg1: string, arg2: string): Promise<string> {
         if (this.processError) {
             try {
-                const result = await this.actor.submitContactMessage(arg0, arg1, arg2, arg3);
+                const result = await this.actor.submitContactMessage(arg0, arg1, arg2);
                 return result;
             } catch (e) {
                 this.processError(e);
                 throw new Error("unreachable");
             }
         } else {
-            const result = await this.actor.submitContactMessage(arg0, arg1, arg2, arg3);
+            const result = await this.actor.submitContactMessage(arg0, arg1, arg2);
             return result;
         }
     }

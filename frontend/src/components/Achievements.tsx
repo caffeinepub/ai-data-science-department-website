@@ -1,179 +1,171 @@
-import { useEffect, useRef, useState } from 'react';
-import { Trophy, BookOpen, Briefcase, Star } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { Award, BookOpen, Rocket, Clock } from 'lucide-react';
 import ScrollAnimation from './ScrollAnimation';
 
-const hackathonWins = [
-  { event: 'Smart India Hackathon 2024', position: '1st Place', team: 'Team InnovatAI', year: '2024' },
-  { event: 'IIT Bombay TechFest Hackathon', position: '2nd Place', team: 'DataMinds', year: '2023' },
-  { event: 'Google Solution Challenge', position: 'Top 50 Global', team: 'AI Pioneers', year: '2023' },
-  { event: 'Microsoft Imagine Cup', position: 'National Finalist', team: 'NeuralNexus', year: '2024' },
-];
-
-const publications = [
+const certifications = [
   {
-    title: 'Federated Learning for Privacy-Preserving Medical Diagnosis',
-    venue: 'IEEE Transactions on Neural Networks',
-    year: '2024',
+    title: 'Machine Learning Specialization',
+    issuer: 'Coursera / DeepLearning.AI',
+    status: 'completed',
+    color: 'blue',
   },
   {
-    title: 'Real-time Object Detection Using Lightweight YOLO Variants',
-    venue: 'International Journal of Computer Vision',
-    year: '2023',
+    title: 'Data Analytics Professional Certificate',
+    issuer: 'Google / Coursera',
+    status: 'completed',
+    color: 'purple',
   },
   {
-    title: 'Sentiment Analysis of Regional Languages Using Transformer Models',
-    venue: 'ACL Workshop on Low-Resource NLP',
-    year: '2024',
+    title: 'Python for Data Science',
+    issuer: 'IBM / Coursera',
+    status: 'completed',
+    color: 'cyan',
   },
   {
-    title: 'Predictive Analytics for Crop Yield Estimation',
-    venue: 'Elsevier Computers and Electronics in Agriculture',
-    year: '2023',
+    title: 'TensorFlow Developer Certificate',
+    issuer: 'TensorFlow / Google',
+    status: 'in-progress',
+    color: 'blue',
   },
 ];
 
-const internships = [
-  { company: 'Google', role: 'ML Engineer Intern', count: 3 },
-  { company: 'Microsoft', role: 'Data Science Intern', count: 5 },
-  { company: 'Amazon', role: 'AI Research Intern', count: 4 },
-  { company: 'Infosys', role: 'Data Analyst Intern', count: 8 },
-  { company: 'TCS', role: 'AI Developer Intern', count: 6 },
-  { company: 'Wipro', role: 'ML Intern', count: 7 },
+const workshops = [
+  {
+    name: 'AI & Machine Learning Workshop',
+    organizer: 'Priyadarshini Engineering College',
+    date: '2024',
+    desc: 'Hands-on workshop covering ML algorithms and practical implementations.',
+  },
+  {
+    name: 'Data Science Bootcamp',
+    organizer: 'Online Platform',
+    date: '2024',
+    desc: 'Intensive bootcamp on data wrangling, EDA, and model building.',
+  },
+  {
+    name: 'Deep Learning Seminar',
+    organizer: 'Technical Symposium',
+    date: '2023',
+    desc: 'Seminar on neural network architectures and deep learning frameworks.',
+  },
 ];
 
-function useCountUp(target: number, isVisible: boolean, duration = 1500) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!isVisible) return;
-    let start = 0;
-    const step = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) {
-        setCount(target);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
-      }
-    }, 16);
-    return () => clearInterval(timer);
-  }, [isVisible, target, duration]);
-  return count;
-}
-
-function StatCard({ value, label, icon: Icon }: { value: number; label: string; icon: React.ElementType }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const count = useCountUp(value, isVisible);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setIsVisible(true); observer.disconnect(); } },
-      { threshold: 0.5 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div ref={ref} className="text-center bg-white rounded-2xl p-6 border border-brand-blue-pale shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group">
-      <div className="w-12 h-12 rounded-xl gradient-blue-accent flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-        <Icon className="w-6 h-6 text-white" />
-      </div>
-      <div className="text-4xl font-bold text-brand-blue-mid font-heading">{count}+</div>
-      <div className="text-sm text-muted-foreground mt-1">{label}</div>
-    </div>
-  );
-}
+const colorMap: Record<string, { badge: string; dot: string }> = {
+  blue: { badge: 'badge-ai', dot: 'bg-ai-blue' },
+  purple: { badge: 'badge-purple', dot: 'bg-ai-purple' },
+  cyan: { badge: 'badge-cyan', dot: 'bg-ai-cyan' },
+};
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20 lg:py-28 bg-white">
+    <section id="achievements" className="py-20 lg:py-28 section-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation>
-          <p className="text-brand-blue-bright text-sm font-semibold uppercase tracking-widest text-center mb-2">
-            Student Success
-          </p>
-          <h2 className="section-title">Student Achievements</h2>
-          <p className="section-subtitle">
-            Our students consistently excel in competitions, research, and industry placements.
-          </p>
+          <div className="text-center mb-16">
+            <span className="badge-ai mb-4 inline-block">Recognition</span>
+            <h2 className="section-title-ai text-white mt-3">
+              Achievements &{' '}
+              <span className="text-gradient-ai">Certifications</span>
+            </h2>
+            <p className="section-subtitle-ai">
+              Continuous learning and professional development milestones
+            </p>
+          </div>
         </ScrollAnimation>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          <StatCard value={25} label="Hackathon Wins" icon={Trophy} />
-          <StatCard value={40} label="Publications" icon={BookOpen} />
-          <StatCard value={120} label="Internships" icon={Briefcase} />
-          <StatCard value={15} label="Awards" icon={Star} />
-        </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Hackathon Wins */}
-          <ScrollAnimation delay={100}>
-            <div className="bg-white rounded-2xl border border-brand-blue-pale shadow-card overflow-hidden h-full">
-              <div className="gradient-blue-accent p-5 flex items-center gap-3">
-                <Trophy className="w-6 h-6 text-white" />
-                <h3 className="text-lg font-bold text-white font-heading">Hackathon Wins</h3>
+          {/* Certifications */}
+          <ScrollAnimation delay={0}>
+            <div className="glass-card rounded-2xl p-6 border border-ai-blue/20 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl gradient-ai flex items-center justify-center shadow-ai-glow">
+                  <Award className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-white">Certifications</h3>
               </div>
-              <div className="p-5 space-y-4">
-                {hackathonWins.map((win) => (
-                  <div key={win.event} className="flex items-start gap-3 p-3 rounded-xl bg-brand-blue-pale/50 hover:bg-brand-blue-pale transition-colors duration-200">
-                    <div className="w-8 h-8 rounded-lg bg-brand-blue-bright/15 flex items-center justify-center flex-shrink-0">
-                      <Trophy className="w-4 h-4 text-brand-blue-bright" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-brand-navy leading-tight">{win.event}</p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Badge className="text-xs bg-brand-blue-mid text-white">{win.position}</Badge>
-                        <span className="text-xs text-muted-foreground">{win.year}</span>
+              <div className="space-y-3">
+                {certifications.map((cert) => {
+                  const colors = colorMap[cert.color];
+                  return (
+                    <div
+                      key={cert.title}
+                      className="glass rounded-xl p-4 border border-ai-dark-border hover:border-ai-blue/30 transition-all duration-300 group"
+                    >
+                      <div className="flex items-start justify-between gap-2 mb-1">
+                        <p className="text-sm font-semibold text-white leading-tight">{cert.title}</p>
+                        {cert.status === 'in-progress' ? (
+                          <span className="flex items-center gap-1 text-xs text-yellow-400/80 flex-shrink-0">
+                            <Clock className="w-3 h-3" />
+                            In Progress
+                          </span>
+                        ) : (
+                          <span className={`${colors.dot} w-2 h-2 rounded-full flex-shrink-0 mt-1`} />
+                        )}
                       </div>
+                      <p className="text-xs text-white/50">{cert.issuer}</p>
                     </div>
+                  );
+                })}
+              </div>
+            </div>
+          </ScrollAnimation>
+
+          {/* Workshops */}
+          <ScrollAnimation delay={100}>
+            <div className="glass-card rounded-2xl p-6 border border-ai-purple/20 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-ai-purple/20 border border-ai-purple/30 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-ai-purple" />
+                </div>
+                <h3 className="text-lg font-bold text-white">Workshops</h3>
+              </div>
+              <div className="space-y-4">
+                {workshops.map((workshop) => (
+                  <div
+                    key={workshop.name}
+                    className="glass rounded-xl p-4 border border-ai-dark-border hover:border-ai-purple/30 transition-all duration-300"
+                  >
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <p className="text-sm font-semibold text-white leading-tight">{workshop.name}</p>
+                      <span className="badge-purple text-xs flex-shrink-0">{workshop.date}</span>
+                    </div>
+                    <p className="text-xs text-ai-purple/80 mb-1">{workshop.organizer}</p>
+                    <p className="text-xs text-white/50 leading-relaxed">{workshop.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
           </ScrollAnimation>
 
-          {/* Research Publications */}
+          {/* Hackathons & Research */}
           <ScrollAnimation delay={200}>
-            <div className="bg-white rounded-2xl border border-brand-blue-pale shadow-card overflow-hidden h-full">
-              <div className="gradient-blue-accent p-5 flex items-center gap-3">
-                <BookOpen className="w-6 h-6 text-white" />
-                <h3 className="text-lg font-bold text-white font-heading">Research Publications</h3>
+            <div className="glass-card rounded-2xl p-6 border border-ai-cyan/20 h-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-ai-cyan/20 border border-ai-cyan/30 flex items-center justify-center">
+                  <Rocket className="w-5 h-5 text-ai-cyan" />
+                </div>
+                <h3 className="text-lg font-bold text-white">Hackathons & Research</h3>
               </div>
-              <div className="p-5 space-y-4">
-                {publications.map((pub) => (
-                  <div key={pub.title} className="p-3 rounded-xl bg-brand-blue-pale/50 hover:bg-brand-blue-pale transition-colors duration-200">
-                    <p className="text-sm font-semibold text-brand-navy leading-tight mb-1">{pub.title}</p>
-                    <p className="text-xs text-brand-blue-mid italic">{pub.venue}</p>
-                    <span className="text-xs text-muted-foreground">{pub.year}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollAnimation>
 
-          {/* Internship Highlights */}
-          <ScrollAnimation delay={300}>
-            <div className="bg-white rounded-2xl border border-brand-blue-pale shadow-card overflow-hidden h-full">
-              <div className="gradient-blue-accent p-5 flex items-center gap-3">
-                <Briefcase className="w-6 h-6 text-white" />
-                <h3 className="text-lg font-bold text-white font-heading">Internship Highlights</h3>
-              </div>
-              <div className="p-5 space-y-3">
-                {internships.map((intern) => (
-                  <div key={intern.company} className="flex items-center justify-between p-3 rounded-xl bg-brand-blue-pale/50 hover:bg-brand-blue-pale transition-colors duration-200">
-                    <div>
-                      <p className="text-sm font-bold text-brand-navy">{intern.company}</p>
-                      <p className="text-xs text-muted-foreground">{intern.role}</p>
-                    </div>
-                    <Badge className="bg-brand-blue-mid text-white text-xs">{intern.count} students</Badge>
+              {/* Coming soon state */}
+              <div className="flex flex-col items-center justify-center py-8 text-center">
+                <div className="w-16 h-16 rounded-2xl glass border border-ai-cyan/20 flex items-center justify-center mb-4 animate-pulse-slow">
+                  <Rocket className="w-8 h-8 text-ai-cyan/60" />
+                </div>
+                <p className="text-white font-semibold mb-2">Coming Soon</p>
+                <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+                  Actively preparing for upcoming hackathons and research opportunities.
+                  Stay tuned for exciting updates!
+                </p>
+                <div className="mt-6 space-y-2 w-full">
+                  <div className="glass rounded-xl p-3 border border-ai-cyan/10 text-left">
+                    <p className="text-xs font-semibold text-ai-cyan">🎯 Goal</p>
+                    <p className="text-xs text-white/50 mt-0.5">Participate in national-level AI hackathons</p>
                   </div>
-                ))}
+                  <div className="glass rounded-xl p-3 border border-ai-cyan/10 text-left">
+                    <p className="text-xs font-semibold text-ai-cyan">🔬 Research Interest</p>
+                    <p className="text-xs text-white/50 mt-0.5">ML applications in real-world problem solving</p>
+                  </div>
+                </div>
               </div>
             </div>
           </ScrollAnimation>

@@ -1,16 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Department Website for the Department of Artificial Intelligence and Data Science at Priyadarshini Engineering College. Modern, professional, responsive single-page website with blue/white gradient theme, smooth animations, and 10 sections: Hero, About, Programs, Faculty, Labs, Student Achievements, Events, Placements, Research, and Contact.",
+  "projectStateVersion": 5,
+  "summary": "Personal portfolio website for Afnan Tahib, an AI & Data Science undergraduate student at Priyadarshini Engineering College, Vaniyambadi. Modern, premium, fully responsive single-page site with dark theme, blue/purple AI-inspired gradients, glassmorphism UI, smooth animations, and 9 sections: Hero, About Me, Skills, Projects, Achievements & Certifications, Education, Resume, Contact, and Footer.",
   "architectural_notes": [
-    "Blue, white, and subtle gradient color theme with professional academic typography",
     "Fully responsive layout (mobile + tablet + desktop) with smooth animations and hover effects",
     "SEO optimized, fast loading, clean structured code with modern UI components",
-    "Footer with quick links and social media icons"
+    "Dark theme with blue/purple AI-inspired gradients and glassmorphism UI components",
+    "Micro-interactions and hover effects on all interactive elements"
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Abstract AI neural network visualization with glowing nodes and connecting lines on a deep blue background, suitable for a full-width hero banner (hero-ai-bg.dim_1920x1080.png)\n- Neutral professional silhouette avatar for faculty member placeholder, clean white background with subtle blue accent (faculty-avatar.dim_400x400.png)\n- Event thumbnail showing a group of students at a tech workshop with laptops, bright academic environment (event-thumb-1.dim_800x500.png)\n- Event thumbnail showing a hackathon competition setting with coding screens and energy (event-thumb-2.dim_800x500.png)\n- Event thumbnail showing a seminar/guest lecture with a speaker at a podium and audience (event-thumb-3.dim_800x500.png)\n- Event thumbnail showing an AI demonstration or robotics showcase in a lab setting (event-thumb-4.dim_800x500.png)",
+  "imageRequirements": "## Required Images\n- Animated neural network / AI grid abstract dark background with blue and purple glowing nodes and connecting lines (hero-neural-bg.dim_1920x1080.png)\n- Professional avatar/profile silhouette illustration in dark blue and purple gradient style for the About Me section (profile-avatar.dim_400x400.png)",
   "existing_features": [
     {
       "id": "feature-implement-a-hero-section-with-the-department-name-department-of-artificial-intelligence-and-data-science-priyadarshini-engineering-college-tagline-innovating-the-future-with-ai-data-science-an-ai-themed-abstract-animated-background-graphic-and-two-cta-buttons-explore-programs-smooth-scrolls-to-programs-section-and-contact-us-smooth-scrolls-to-contact-section",
@@ -123,74 +123,156 @@
         "REQ-15"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-rebuild-the-entire-frontend-as-a-personal-portfolio-for-afnan-tahib-replace-all-existing-department-focused-sections-with-a-fully-responsive-single-page-portfolio-using-a-dark-theme-with-blue-purple-ai-inspired-gradients-subtle-glassmorphism-ui-hover-effects-micro-interactions-and-smooth-scroll-animations-apply-consistent-dark-background-colors-glassy-card-surfaces-and-blue-to-purple-gradient-accents-throughout-every-section-and-component-use-a-modern-sans-serif-heading-font-paired-with-a-clean-body-font-all-existing-department-sections-programs-faculty-labs-placements-research-events-achievements-as-department-centric-must-be-replaced-with-the-personal-portfolio-sections-described-in-subsequent-requirements",
+      "title": "Rebuild the entire frontend as a personal portfolio for Afnan Tahib. Replace all existing department-focused sections with a fully responsive single-page portfolio using a dark theme with blue/purple AI-inspired gradients, subtle glassmorphism UI, hover effects, micro-interactions, and smooth scroll animations. Apply consistent dark background colors, glassy card surfaces, and blue-to-purple gradient accents throughout every section and component. Use a modern sans-serif heading font paired with a clean body font. All existing department sections (Programs, Faculty, Labs, Placements, Research, Events, Achievements as department-centric) must be replaced with the personal portfolio sections described in subsequent requirements.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-full-screen-hero-section-with-large-bold-name-afnan-tahib-subtitle-ai-data-science-undergraduate-intro-text-passionate-about-machine-learning-data-analytics-and-building-intelligent-solutions-that-solve-real-world-problems-two-cta-buttons-view-projects-smooth-scrolls-to-the-projects-section-contact-me-smooth-scrolls-to-the-contact-section-and-a-live-animated-neural-network-or-abstract-ai-grid-canvas-effect-as-the-background",
+      "title": "Implement a full-screen Hero section with: large bold name 'Afnan Tahib', subtitle 'AI & Data Science Undergraduate', intro text 'Passionate about Machine Learning, Data Analytics, and building intelligent solutions that solve real-world problems.', two CTA buttons ('View Projects' smooth-scrolls to the Projects section, 'Contact Me' smooth-scrolls to the Contact section), and a live animated neural network or abstract AI grid canvas effect as the background.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-about-me-section-with-the-following-personal-details-currently-pursuing-b-tech-in-artificial-intelligence-data-science-at-priyadarshini-engineering-college-vaniyambadi-career-goal-of-aspiring-ai-engineer-and-research-enthusiast-strong-interest-in-ml-data-science-and-intelligent-systems-strengths-logical-thinking-problem-solving-fast-learner-display-this-information-using-a-clean-card-or-two-column-layout-with-scroll-triggered-animations",
+      "title": "Implement an About Me section with the following personal details: currently pursuing B.Tech in Artificial Intelligence & Data Science at Priyadarshini Engineering College, Vaniyambadi; career goal of Aspiring AI Engineer and Research Enthusiast; strong interest in ML, Data Science, and intelligent systems; strengths: Logical thinking, problem-solving, fast learner. Display this information using a clean card or two-column layout with scroll-triggered animations.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-skills-section-using-animated-skill-cards-or-progress-bars-grouped-into-three-categories-programming-python-c-sql-ai-ml-machine-learning-deep-learning-data-analytics-nlp-basic-computer-vision-basic-and-tools-libraries-pandas-numpy-scikit-learn-tensorflow-basic-tableau-power-bi-matplotlib-each-skill-entry-should-display-its-name-and-a-visual-indicator-animated-progress-bar-or-badge-card-apply-staggered-scroll-in-animations",
+      "title": "Implement a Skills section using animated skill cards or progress bars, grouped into three categories: Programming (Python, C++, SQL), AI/ML (Machine Learning, Deep Learning, Data Analytics, NLP (Basic), Computer Vision (Basic)), and Tools & Libraries (Pandas, NumPy, Scikit-learn, TensorFlow (Basic), Tableau, Power BI, Matplotlib). Each skill entry should display its name and a visual indicator (animated progress bar or badge card). Apply staggered scroll-in animations.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-projects-section-with-professional-card-layout-containing-exactly-two-project-cards-1-title-future-ds-01-description-data-science-and-analytics-project-showcasing-practical-implementation-of-data-processing-and-analysis-techniques-tech-stack-tags-python-data-science-analytics-and-a-github-button-linking-to-https-github-com-afnan-tahib-future-ds-01-2-title-sales-performance-dashboard-superstore-analysis-description-interactive-tableau-dashboard-analyzing-sales-and-profit-performance-with-data-visualization-insights-tech-stack-tags-tableau-data-visualization-analytics-and-a-live-demo-button-linking-to-https-public-tableau-com-app-profile-afnan-tahib-viz-salesperformancedashboardsuperstoreanalysis-17717554808110-salesprofitperformancedashboard-publish-yes-cards-should-have-glassmorphism-styling-and-hover-lift-effects",
+      "title": "Implement a Projects section with professional card layout containing exactly two project cards: (1) Title 'FUTURE_DS_01', description 'Data Science and Analytics project showcasing practical implementation of data processing and analysis techniques.', tech stack tags (Python, Data Science, Analytics), and a 'GitHub' button linking to https://github.com/Afnan-Tahib/FUTURE_DS_01; (2) Title 'Sales Performance Dashboard – Superstore Analysis', description 'Interactive Tableau dashboard analyzing sales and profit performance with data visualization insights.', tech stack tags (Tableau, Data Visualization, Analytics), and a 'Live Demo' button linking to https://public.tableau.com/app/profile/afnan.tahib/viz/SalesPerformanceDashboardSuperstoreAnalysis_17717554808110/SalesProfitPerformanceDashboard?publish=yes. Cards should have glassmorphism styling and hover lift effects.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-achievements-certifications-section-with-three-subsections-1-online-certifications-displayed-as-badge-style-cards-with-placeholder-certification-entries-2-workshops-attended-displayed-as-a-list-or-cards-with-placeholder-entries-3-hackathons-research-as-a-placeholder-subsection-indicating-upcoming-entries-include-scroll-animations-for-each-subsection",
+      "title": "Implement an Achievements & Certifications section with three subsections: (1) Online Certifications displayed as badge-style cards with placeholder certification entries; (2) Workshops Attended displayed as a list or cards with placeholder entries; (3) Hackathons & Research as a placeholder subsection indicating upcoming entries. Include scroll animations for each subsection.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-education-section-displaying-degree-b-tech-in-artificial-intelligence-data-science-institution-priyadarshini-engineering-college-vaniyambadi-status-undergraduate-student-currently-pursuing-use-a-clean-timeline-or-card-layout-with-the-institution-name-degree-and-current-status-prominently-displayed",
+      "title": "Implement an Education section displaying: Degree — B.Tech in Artificial Intelligence & Data Science; Institution — Priyadarshini Engineering College, Vaniyambadi; Status — Undergraduate Student (currently pursuing). Use a clean timeline or card layout with the institution name, degree, and current status prominently displayed.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-resume-section-containing-a-prominently-styled-download-resume-button-the-button-should-link-to-a-placeholder-pdf-path-e-g-assets-resume-pdf-and-open-in-a-new-tab-include-a-short-label-such-as-my-resume-or-curriculum-vitae-as-the-section-heading",
+      "title": "Implement a Resume section containing a prominently styled 'Download Resume' button. The button should link to a placeholder PDF path (e.g., /assets/resume.pdf) and open in a new tab. Include a short label such as 'My Resume' or 'Curriculum Vitae' as the section heading.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-section-with-contact-details-showing-email-afnantahibkondalam-gmail-com-github-https-github-com-afnan-tahib-future-ds-01-and-linkedin-https-www-linkedin-com-in-afnan-tahib-kundalam-7a3881384-as-clickable-icons-links-a-contact-form-with-fields-for-name-email-and-message-with-a-submit-button-that-stores-submissions-in-the-backend-style-the-section-with-glassmorphism-cards-and-gradient-accents",
+      "title": "Implement a Contact section with: contact details showing email afnantahibkondalam@gmail.com, GitHub https://github.com/Afnan-Tahib/FUTURE_DS_01, and LinkedIn https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384 as clickable icons/links; a contact form with fields for Name, Email, and Message with a Submit button that stores submissions in the backend. Style the section with glassmorphism cards and gradient accents.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-site-footer-with-quick-navigation-links-to-all-major-sections-about-skills-projects-achievements-education-resume-contact-social-media-icons-linking-to-github-https-github-com-afnan-tahib-future-ds-01-and-linkedin-https-www-linkedin-com-in-afnan-tahib-kundalam-7a3881384-and-a-minimal-copyright-line-reading-2024-afnan-tahib-all-rights-reserved",
+      "title": "Implement a site footer with: quick navigation links to all major sections (About, Skills, Projects, Achievements, Education, Resume, Contact); social media icons linking to GitHub (https://github.com/Afnan-Tahib/FUTURE_DS_01) and LinkedIn (https://www.linkedin.com/in/afnan-tahib-kundalam-7a3881384); and a minimal copyright line reading '© 2024 Afnan Tahib. All rights reserved.'",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-responsive-sticky-navigation-bar-for-the-portfolio-with-afnan-tahib-as-the-brand-logo-text-on-the-left-and-navigation-links-about-skills-projects-achievements-education-resume-contact-on-the-right-each-link-smoothly-scrolls-to-its-corresponding-section-include-a-hamburger-menu-on-mobile-that-expands-to-show-nav-links-apply-glassmorphism-background-on-scroll",
+      "title": "Implement a responsive sticky navigation bar for the portfolio with 'Afnan Tahib' as the brand/logo text on the left, and navigation links (About, Skills, Projects, Achievements, Education, Resume, Contact) on the right. Each link smoothly scrolls to its corresponding section. Include a hamburger menu on mobile that expands to show nav links. Apply glassmorphism background on scroll.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
-      "id": "AR-1",
-      "summary": "Hero section with department name, tagline, AI abstract background, and CTA buttons",
+      "id": "AR-25",
+      "summary": "Hero section: bold name 'Afnan Tahib', subtitle, intro text, CTA buttons (View Projects, Contact Me), animated neural network/AI grid background",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-2",
-      "summary": "About section with Vision/Mission, intro, and key highlights",
+      "id": "AR-26",
+      "summary": "About Me section: B.Tech AI&DS, college info, career goal, interests, and strengths",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-3",
-      "summary": "Programs Offered section: B.Tech AI&DS, M.Tech placeholder, curriculum highlights",
+      "id": "AR-27",
+      "summary": "Skills section: animated cards/progress bars for Programming, AI/ML, and Tools & Libraries",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-4",
-      "summary": "Faculty section with cards showing photo, name, designation, specialization",
+      "id": "AR-28",
+      "summary": "Projects section: FUTURE_DS_01 (GitHub) and Sales Performance Dashboard (Tableau live link), each with title, description, tech stack, and action button",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-5",
-      "summary": "Laboratories & Infrastructure section: AI Lab, Data Analytics Lab, Computing, Smart Classroom",
+      "id": "AR-29",
+      "summary": "Achievements & Certifications section: badge-style certification cards, workshops attended, hackathons and research placeholders",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-6",
-      "summary": "Student Achievements section: hackathon wins, research publications, internships",
+      "id": "AR-30",
+      "summary": "Education section: B.Tech AI&DS at Priyadarshini Engineering College, Vaniyambadi",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-7",
-      "summary": "Events & Workshops section: upcoming events and past events gallery",
+      "id": "AR-31",
+      "summary": "Resume section with Download Resume button (PDF placeholder)",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-8",
-      "summary": "Placement & Industry Collaboration: stats, partner logos, internship opportunities",
+      "id": "AR-32",
+      "summary": "Contact section: email, GitHub, LinkedIn links, clickable social icons, and contact form (Name, Email, Message)",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-9",
-      "summary": "Research & Projects section: ongoing projects and student project showcase",
+      "id": "AR-33",
+      "summary": "Footer with quick nav links, social media icons, and copyright line",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-10",
-      "summary": "Contact section: address, email, phone, Google Maps, contact form",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-24",
-      "summary": "Implement a Motoko backend actor with a `submitContactMessage` update call that accepts Name, Email, Subject, and Message fields and stores them in stable memory. Provide a `getContactMessages` query for admin retrieval.",
+      "id": "AR-43",
+      "summary": "Update the backend contact form submission handler to accept and store portfolio contact messages with fields: name, email, and message (removing the 'subject' field if it conflicts, or making it optional). Ensure the submitContactMessage function accepts these three fields and persists them in stable storage.",
       "reqIds": [
-        "REQ-14"
+        "REQ-25"
       ],
       "status": "pending"
     }
